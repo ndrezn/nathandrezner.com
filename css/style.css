@@ -53,14 +53,16 @@ a:hover{
 
 .image-line {
   display: flex;
-  justify-content: space-between;
-  width:60%;
-  margin: 0 auto;
-  padding-bottom: 200px
+  justify-content: space-around;
+  padding-bottom: 200px;
+  position: relative;
+
 }
 
 .photo {
   padding:5px;
+  width:33%;
+  height:20%;
 }
 
 .photoby {
@@ -69,13 +71,17 @@ a:hover{
   padding-top: 200px;
   padding-bottom: 50px;
   animation: fadein_one 1s;
+
 }
 
 .photo:hover{
   -webkit-transform: scale(2,2);
+  scale:(2,2);
 }
 
 #fadein{
+  width: 60%;
+  margin: 0 auto;
   animation: fadein_one 1s;
 }
 
