@@ -54,7 +54,7 @@ a:hover{
 .image-line {
   display: flex;
   justify-content: space-around;
-  padding-bottom: 200px;
+  padding-bottom: 10%;
   position: relative;
 
 }
@@ -83,6 +83,11 @@ a:hover{
   width: 60%;
   margin: 0 auto;
   animation: fadein_one 1s;
+}
+
+.faderate{
+  animation: fadein_one 1s;
+
 }
 
 @keyframes fadein_one {
