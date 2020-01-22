@@ -82,12 +82,7 @@ a:hover{
 #fadein{
   width: 60%;
   margin: 0 auto;
-  animation: fadein_one 1s;
-}
-
-.faderate{
-  animation: fadein_one 1s;
-
+  animation: fadein_one 3s;
 }
 
 @keyframes fadein_one {
