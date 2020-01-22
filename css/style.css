@@ -76,7 +76,8 @@ a:hover{
 
 .photo:hover{
   -webkit-transform: scale(2,2);
-  scale:(2,2);
+  z-index: 1;
+
 }
 
 #fadein{
