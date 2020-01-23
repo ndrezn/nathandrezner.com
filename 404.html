@@ -1,0 +1,22 @@
+---
+layout: default
+title: Nathan Drezner
+---
+<div class = 'contact' id='dunnet'></div>
+
+<script>
+	var text = ["You can't go that way.",
+				"Digging here reveals nothing.",
+				"I don't understand that.",
+				"I don't know what that is.",
+				"You don't have that.",
+				"You must supply an indirect object.",
+				"I see nothing special about that."];
+
+	function change() {
+		var elem = document.getElementById("dunnet");
+		elem.innerHTML = text[Math.floor(Math.random() * text.length)];
+	}
+
+	change()
+</script>
