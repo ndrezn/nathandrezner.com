@@ -59,6 +59,12 @@ a:hover{
 
 }
 
+.image-line2 {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
 .photo {
   padding:5px;
   width:33%;
@@ -74,6 +80,12 @@ a:hover{
 
 }
 
+.photo2:hover{
+  -webkit-transform: scale(1.5,1.5);
+  z-index: 1;
+
+}
+
 .photo:hover{
   -webkit-transform: scale(2,2);
   z-index: 1;
@@ -85,6 +97,8 @@ a:hover{
   margin: 0 auto;
   animation: fadein_one 3s;
 }
+
+
 
 @keyframes fadein_one {
     0% { opacity: 0; }

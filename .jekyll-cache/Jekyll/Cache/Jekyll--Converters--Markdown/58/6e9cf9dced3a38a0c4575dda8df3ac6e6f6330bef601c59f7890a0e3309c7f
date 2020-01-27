@@ -1,0 +1,38 @@
+I"�<p>I organize and curate an art and design collective in Montreal called <i>secretgroup</i>, based around a series of spontaneous events and art spaces. More information on the collective, and the events we host, is available on our website at <a target="_blank" href="https://secretgroup.xyz">secretgroup.xyz</a>.</p>
+
+<p>This project started out as a loose idea in Fall 2017. I spent a late night up with a good friend building a website up from scratch, with little more than a URL to work off of: secretgroup.xyz. Although I retained the website after that first night, technical issues meant the project faded into the background.</p>
+
+<div class="image-line2">
+	<img id="photo2" class="photo" src="/images/blog/01.jpg" />
+	<img id="photo2" class="photo" src="/images/blog/02.jpg" />
+</div>
+<div style="text-align:center; margin: 0 auto;"><small>Stickers were scattered everywhere, from street posts to café bathrooms.<br />(Hover over images to zoom)</small></div>
+
+<p>Two years later, I picked up the concept again, this time compelled to turn it into something material. The concept was simple. Populate Montreal with stickers labelled only with a URL, which leads to a website with an invitation offering only an unmarked address and a date. Would it work? Who would show?</p>
+
+<iframe src="https://secretgroup.xyz/old_index" style="margin: 0 auto;" width="100%" height="500px" frameborder="0">
+</iframe>
+<div style="text-align:center; margin: 0 auto;"><small>The <a target="_blank" href="https://secretgroup.xyz">original website</a></small></div>
+
+<p>For the event in November 2019, a small group of local artists contributed a set of ambient music, animations, and physical art pieces. The space was lit in bright red and filled with projections. The project will continue, including the production of more events and art based on the spontaneous identity of the group—if you want in, join our email list.</p>
+
+<div id="mc_embed_signup" class="center-fit">
+	<form action="https://xyz.us20.list-manage.com/subscribe/post?u=c26f344b6a56830ff77f23873&amp;id=d46fa9d0e2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+	    <div id="mc_embed_signup_scroll">
+		
+		<div class="mc-field-group">
+			<input class="required email" type="email" value="" placeholder="Enter your email" name="EMAIL" id="mce-EMAIL" />
+		</div>
+
+		<div id="mce-responses" class="clear">
+			<div class="response" id="mce-error-response" style="display:none"></div>
+			<div class="response" id="mce-success-response" style="display:none"></div>
+		</div>  
+
+	    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c26f344b6a56830ff77f23873_d46fa9d0e2" tabindex="-1" value="" /></div>
+	    <p></p>
+	    <div class="center-fit"><input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="center-fit" /></div>
+	    </div>
+	</form>
+</div>
+:ET

@@ -1,49 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Instagram Bots</title>
-    <meta charset="utf-8"/>
-
-    <link rel = "stylesheet" type = "text/css" href = "/css/main.css" />
-
-    <meta property="og:image" content="https://ndrezn.github.io/images/social-preview.jpg">
-    <meta property="og:type" content="website">
-    <meta property="og:image:type" content="image/jpg">
-    <meta property="og:image:width" content="1680">
-    <meta property="og:image:height" content="1050">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156698951-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-156698951-1');
-    </script> 
-
-  </head>
-
-
-  <body>
-    <header>
-      <div id='location'>
-        <a href="/">Nathan Drezner</a>
-            <div>Montréal, QC</div>
-        </div>
-
-        <div id='nav'>
-          <a class='page-link ' href='/research'>Research</a><br>
-          <a class='page-link ' href='/photography'>Photography</a><br>
-          <a class='page-link ' href='/other'>Other Work</a>
-
-      </div>
-    </header>
-
-    <div id = 'body-text' class = 'contact'>
-	<h2>Instagram Bots</h2>
-	<h4>January 21, 2020</h4>
-	<p>Over the course of 2019, I built and deployed two Instagram bots, <a target="_blank" href="https://www.instagram.com/wikipictureoftheday/">@wikipictureoftheday</a> and <a target="_blank" href="https://www.instagram.com/wacky_minions/">@wacky_minions</a>. @wikipictureoftheday had a relatively simple concept: Pull the <a target="_blank" href="https://en.wikipedia.org/wiki/Wikipedia:Picture_of_the_day">Wikipedia picture of the day</a> and post it to Instagram at regular intervals. It ended up making a pretty compelling feed, with plenty of interesting facts and photography, but never took off in popularity.</p>
+I"h<p>Over the course of 2019, I built and deployed two Instagram bots, <a target="_blank" href="https://www.instagram.com/wikipictureoftheday/">@wikipictureoftheday</a> and <a target="_blank" href="https://www.instagram.com/wacky_minions/">@wacky_minions</a>. @wikipictureoftheday had a relatively simple concept: Pull the <a target="_blank" href="https://en.wikipedia.org/wiki/Wikipedia:Picture_of_the_day">Wikipedia picture of the day</a> and post it to Instagram at regular intervals. It ended up making a pretty compelling feed, with plenty of interesting facts and photography, but never took off in popularity.</p>
 
 <p>@wacky_minions, on the other hand, blew up. The account sources random images of Minions from Google Images and builds a caption using a Minion-themed caption generator I designed. At its peak, I was gaining 500 followers a week and posting more than eight times every day to an audience that now exceeds nearly 7,000 users. The content was simple, but clearly popular. Following the account meant Minion posts would instantly take over your feed.</p>
 
@@ -51,7 +6,7 @@
 	<img class="photo" src="/images/blog/03.jpg" />
 	<img class="photo" src="/images/blog/04.jpg" />
 </div>
-<div style="text-align:center; margin: 0 auto;"><small>The @wacky_minions page and a sample of the associated analytics. (January 27, 2020)</small></div>
+<div style="text-align:center; margin: 0 auto;"><small>The @wacky_minions page and its associated analytics. (January 27, 2020)</small></div>
 
 <p>Both accounts are now offline—since their inception, Instagram has changed their API accessibility, and now, an Instagram API is all but nonexistent. The decision to remove API accessibility is likely part of a larger crackdown on Instagram bots, especially content like @wacky_minions, but Instagram's restrictions on API access began in 2018 <a target="_blank" href="https://techcrunch.com/2018/04/04/facebook-instagram-api-shut-down/">as a response to the Cambridge Analytica scandal</a>. The decision to remove API access on Instagram is incredibly disappointing. For one, it means that engaging content like @wikipictureoftheday is nearly impossible to publish anymore. It also means that it is far more difficult to retrieve data from Instagram as an end user, meaning the outside world is unable to understand the data that Instagram can and does collect from their users. In other industries, there are laws protecting the public's right to retrieve data; take, for example, Seattle's bike share program, which <a target="_blank" href="https://www.seattle.gov/Documents/Departments/SDOT/BikeProgram/BicycleSharePermitRequirements.pdf">requires operators to provide SDOT with real-time information on their entire fleet through an API</a>.</p>
 
@@ -61,14 +16,4 @@
 
 <p>These two concerns—an interest in transparency of information from the companies collecting data and an interest in protecting user privacy—are inherently at ends with one another. It's incredibly difficult to realize a solution to both at the same time. But information access models like that of <a target="_blank" href="https://developer.twitter.com/">Twitter</a>, which requires users to submit a processed request in order to obtain API access, put a tap on the accessibility of data. Moreover, only information users make public (for example, content produced by accounts that have opted in to being public) should be available. This information should be a legal right: Users should have access to the public data on social media. Likewise, users should be able to automate content posting, allowing for content possible only from a bot. From there, let the users decide whether they want to follow those accounts—even if it sometimes means letting nonsense accounts like @wacky_minions end up far more popular than serious accounts like @wikipictureoftheday.</p>
 <p><br /><br /></p>
-
-</div>
-  
-    <footer>
-      <div id='footer'>
-            <div><a href = "mailto:">nathan (at) drezner (dot) com</a><br><br></div>
-        </div>
-    </footer>
-  </body>
-
-</html>
+:ET
