@@ -8,5 +8,24 @@ title: Nathan Drezner
 	Researcher in cultural analytics and computational linguistics<br>
 	Abstract and portrait photographer<br><br>
 
-	Montréal, QC<br><br>
+	<div id="temparature_montreal"><div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+$.ajax({
+      url: "https://api.darksky.net/forecast/2ccd047ee33ec4a9e6405c8ea777c2f5/45.5581968,-73.8516462",
+
+      jsonp: "callback",
+
+      dataType: "jsonp",
+      success: function(data) {
+          //console.log( data.minutely.summary); // server response
+          $('#temparature_montreal').html("Now in Montréal: " + data.currently.summary.toLowerCase()+".");
+
+
+
+
+      }
+  });
+</script>
