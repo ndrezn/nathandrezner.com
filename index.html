@@ -2,6 +2,7 @@
 layout: default
 title: Nathan Drezner
 ---
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
 <div class = 'contact'>
 	Undergraduate at McGill University<br>
@@ -10,22 +11,17 @@ title: Nathan Drezner
 
 	<div id="temparature_montreal"><div>
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>
-$.ajax({
-      url: "https://api.darksky.net/forecast/2ccd047ee33ec4a9e6405c8ea777c2f5/45.5581968,-73.8516462",
+  $.ajax({
+        url: "https://api.darksky.net/forecast/46ebeec6f86f5b2543b23fb9a8c898b1/45.5581968,-73.8516462",
 
-      jsonp: "callback",
+        jsonp: "callback",
 
-      dataType: "jsonp",
-      success: function(data) {
-          //console.log( data.minutely.summary); // server response
-          $('#temparature_montreal').html("Now in Montréal: " + data.currently.summary.toLowerCase()+".");
-
-
-
-
-      }
-  });
+        dataType: "jsonp",
+        success: function(data) {
+            //console.log( data.minutely.summary); // server response
+            $('#temparature_montreal').html("It's " + data.currently.summary.toLowerCase()+" in Montréal.");
+        }
+        // POWERED BY DARK SKY
+    });
 </script>
