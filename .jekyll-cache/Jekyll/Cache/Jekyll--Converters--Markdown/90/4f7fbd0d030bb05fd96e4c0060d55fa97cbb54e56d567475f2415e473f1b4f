@@ -1,76 +1,4 @@
-<!-- 
-  _                                              _        _                               _         __       _ 
- | |                                            | |      (_)                             | |       /_/      | |
- | |__   ___  _ __ ___   ___ _ __ ___   __ _  __| | ___   _ _ __    _ __ ___   ___  _ __ | |_ _ __ ___  __ _| |
- | '_ \ / _ \| '_ ` _ \ / _ \ '_ ` _ \ / _` |/ _` |/ _ \ | | '_ \  | '_ ` _ \ / _ \| '_ \| __| '__/ _ \/ _` | |
- | | | | (_) | | | | | |  __/ | | | | | (_| | (_| |  __/ | | | | | | | | | | | (_) | | | | |_| | |  __/ (_| | |
- |_| |_|\___/|_| |_| |_|\___|_| |_| |_|\__,_|\__,_|\___| |_|_| |_| |_| |_| |_|\___/|_| |_|\__|_|  \___|\__,_|_|
-                                                                                                               
-                                                                                                               
-              _   _                             _                                                 
-             | | | |                  ____     | |                                                
-  _ __   __ _| |_| |__   __ _ _ __   / __ \  __| |_ __ ___ _____ __   ___ _ __ ___ ___  _ __ ___  
- | '_ \ / _` | __| '_ \ / _` | '_ \ / / _` |/ _` | '__/ _ \_  / '_ \ / _ \ '__/ __/ _ \| '_ ` _ \ 
- | | | | (_| | |_| | | | (_| | | | | | (_| | (_| | | |  __// /| | | |  __/ |_| (_| (_) | | | | | |
- |_| |_|\__,_|\__|_| |_|\__,_|_| |_|\ \__,_|\__,_|_|  \___/___|_| |_|\___|_(_)\___\___/|_| |_| |_|
-                                     \____/                                           
-
--->             
-                                                                                                  
-
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Wikipedia Histories</title>
-    <meta charset="utf-8"/>
-
-    <link rel = "stylesheet" type = "text/css" href = "/css/main.css" />
-
-    <meta property="og:image" content="https://ndrezn.github.io/images/social-preview.jpg">
-    <meta property="og:type" content="website">
-    <meta property="og:image:type" content="image/jpg">
-    <meta property="og:image:width" content="1680">
-    <meta property="og:image:height" content="1050">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156698951-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-156698951-1');
-    </script> 
-
-
-  </head>
-
-
-  <body>
-  
-    <header>
-      <div id='location'>
-        <a href="/">Nathan Drezner</a>
-            <div>Montréal, QC</div>
-        </div>
-
-        <div id='nav'>
-          <a class='page-link ' href='/research'>Research</a><br>
-          <a class='page-link ' href='/photography'>Photography</a><br>
-          <a class='page-link ' href='/other'>Other Work</a>
-
-      </div>
-    </header>
-    <footer>
-      <div id='footer'>
-            <div id='email'><a href = "mailto:nathan@drezner.com">nathan (at) drezner (dot) com</a><br><br></div>
-        </div>
-    </footer>
-
-    <div id = 'body-text' class = 'contact'>
-	<h2>Wikipedia Histories</h2>
-	<h4>January 30, 2020</h4>
-	<p>I’ve just released a project onto PyPi, <a href="https://pypi.org/project/wikipedia-histories/"><code class="highlighter-rouge">wikipedia-histories</code></a>. I built it in fall 2018, and I’m just releasing it now after restructuring it into a generalizable tool.</p>
+I"�<p>I’ve just released a project onto PyPi, <a href="https://pypi.org/project/wikipedia-histories/"><code class="highlighter-rouge">wikipedia-histories</code></a>. I built it in fall 2018, and I’m just releasing it now after restructuring it into a generalizable tool.</p>
 
 <p>After digging around for what felt like ages trying to find a way to scrape the content of previous revisions of Wikipedia articles, I ended up building my own program to complete the task, using several other Wikipedia parsers to help reach that end. <a href="https://pypi.org/project/mwclient/">mwClient</a> allows simple scraping of the metadata of revisions, and the content of revisions is accessible from Wikipedia’s API given an revision ID. Put those two together and it’s possible to compile the list of revision IDs (and the metadata for those revisions) and get back a usable piece of text by passing it directly to Wikipedia. Unfortunately, that text comes back as raw HTML—which means it needs to be parsed into plain text. <code class="highlighter-rouge">wikipedia-histories</code> handles this and returns the data collected into an object.</p>
 
@@ -102,10 +30,4 @@
   <span class="o">&gt;&gt;&gt;</span> <span class="n">ratings</span>
   <span class="c1"># ['NA', 'NA', 'NA', 'NA', 'stub', 'stub', ...
 </span></code></pre></div></div>
-
-</div>
-  
-
-  </body>
-
-</html>
+:ET
