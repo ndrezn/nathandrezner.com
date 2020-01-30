@@ -1,3 +1,7 @@
-site
+# git rm -r --cached .
+# git add .
+
+
+_site
 .jekyll-cache
 *.DS_Store
