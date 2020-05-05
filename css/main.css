@@ -85,6 +85,11 @@ a:hover{
   z-index: 1;
 
 }
+.photo3:hover{
+  -webkit-transform: scale(1.25,1.25);
+  z-index: 1;
+
+}
 
 .photo:hover{
   -webkit-transform: scale(2,2);
