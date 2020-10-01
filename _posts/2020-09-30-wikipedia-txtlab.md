@@ -5,6 +5,10 @@ title: Everyday Specialization on Wikipedia
 
 A paper I wrote studying specialization on Wikipedia was just published through the [McGill .txtLab](https://txtlab.org) and is available there: [txtlab.org/2020/09/do-wikipedia-editors-specialize/](https://txtlab.org/2020/09/do-wikipedia-editors-specialize/). The paper focuses on how editors on Wikipedia cluster around different topics—if that interests you, check it out!
 
+<div class='image-line2'>
+	<img class='photo3'  style='width:80%;' src="/images/blog/everyday_specialization.jpg">
+</div>
+
 The code to generate the dataset is open source and accessible from my Github, and I wrote a [brief blog post](/2020/01/30/wikipedia-histories.html) about it. The dataset itself is accessible on [Harvard Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QQHEHL).
 
 
