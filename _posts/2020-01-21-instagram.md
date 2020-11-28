@@ -3,6 +3,8 @@ layout: post
 title: Instagram Bots
 ---
 
+<p><i>Update, November 2020:The Wikipedia Picture of the Day bot is <a target="_blank" href = "https://twitter.com/wiki_potd/">now active again</a> on Twitter, which has a much more permissive API—one which I would highly recommend working with. There is also a companion bot, <a target="_blank" href = "https://twitter.com/potd_context/">POTD context</a>.</i></p>
+
 <p>Over the course of 2019, I built and deployed two Instagram bots, <a target="_blank" href = "https://www.instagram.com/wikipictureoftheday/">@wikipictureoftheday</a> and <a target="_blank" href = "https://www.instagram.com/wacky_minions/">@wacky_minions</a>. @wikipictureoftheday had a relatively simple concept: Pull the <a target="_blank" href = "https://en.wikipedia.org/wiki/Wikipedia:Picture_of_the_day">Wikipedia picture of the day</a> and post it to Instagram at regular intervals. It ended up making a pretty compelling feed, with plenty of interesting facts and photography, but never took off in popularity.</p>
 
 <p>@wacky_minions, on the other hand, blew up. The account sources random images of Minions from Google Images and builds a caption using a Minion-themed caption generator I designed. At its peak, I was gaining 500 followers a week and posting more than eight times every day to an audience that now exceeds nearly 7,000 users. The content was simple, but clearly popular. Following the account meant Minion posts would instantly take over your feed.</p>
