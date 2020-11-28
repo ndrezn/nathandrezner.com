@@ -5,6 +5,12 @@ title: secretgroup.xyz
 
 I organize and curate an art and design collective in Montreal called <i>secretgroup</i>, based around a series of spontaneous events and art spaces. More information on the collective, and the events we host, is available on our website at <a target="_blank" href = "https://secretgroup.xyz">secretgroup.xyz</a>.
 
+<div class='image-line2'>
+	<img class='photo' src="/images/blog/107.jpg">
+	<img class='photo' src="/images/blog/108.jpg">
+	<img class='photo' src="/images/blog/109.jpg">
+</div>
+
 This project started out as a loose idea in Fall 2017. I spent a late night up with a good friend building a website up from scratch, with little more than a URL to work off of: secretgroup.xyz. Although I retained the website after that first night, technical issues meant the project faded into the background.
 
 <div class='image-line2'>
