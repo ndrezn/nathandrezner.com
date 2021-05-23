@@ -1,112 +1,111 @@
 body {
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-  font-size: 16px; font-style: normal; 
-  color:#686867;
-
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    color: #686867;
 }
 
 a {
-  color:#000
+    color: #000;
 }
 
-a:hover{
-  font-style: italic;
+a:hover {
+    font-style: italic;
 }
 
 #body-text {
-  padding-bottom: 200px;
+    padding-bottom: 200px;
 }
 
 #location {
-  position: fixed;
-  left: 20px;
-  top: 20px;
-  display: inline-block;
-  z-index: 100;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    display: inline-block;
+    z-index: 100;
 }
 
-#nav{
-    position:fixed;
-    top:20px;
-    right:20px;
+#nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
 }
 
-#footer{
-  position:fixed;
-  right:20px;
-  bottom:20px;
+#footer {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
 }
 
-#body-img{
-  text-align:center;
-  padding-top: 200px;
-  padding-right: 200px;
-  animation: fadein_one 1s;
+#body-img {
+    text-align: center;
+    padding-top: 200px;
+    padding-right: 200px;
+    animation: fadein_one 1s;
 }
 
-.contact{
-  width: 50%;
-  margin: 0 auto;
-  padding-top: 200px;
-  animation: fadein_one 1s;
+.contact {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 200px;
+    animation: fadein_one 1s;
 }
 
 .image-line {
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 10%;
-  position: relative;
-
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10%;
+    position: relative;
 }
 
 .image-line2 {
-  display: flex;
-  justify-content: space-around;
-  position: relative;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
 }
 
 .photo {
-  padding:5px;
-  width:33%;
-  height:20%;
+    padding: 5px;
+    width: 33%;
+    height: 20%;
 }
 
 .photoby {
-  width: 60%;
-  margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 50px;
-  animation: fadein_one 1s;
-
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 50px;
+    animation: fadein_one 1s;
 }
 
-.photo2:hover{
-  -webkit-transform: scale(1.5,1.5);
-  z-index: 1;
-
+.photo2:hover {
+    -webkit-transform: scale(1.5, 1.5);
+    z-index: 1;
 }
-.photo3:hover{
-  -webkit-transform: scale(1.25,1.25);
-  z-index: 1;
-
+.photo3:hover {
+    -webkit-transform: scale(1.25, 1.25);
+    z-index: 1;
 }
 
-.photo:hover{
-  -webkit-transform: scale(2,2);
-  z-index: 1;
-
+.photo:hover {
+    -webkit-transform: scale(2, 2);
+    z-index: 1;
 }
 
-#fadein{
-  width: 60%;
-  margin: 0 auto;
-  animation: fadein_one 3s;
+#fadein {
+    width: 60%;
+    margin: 0 auto;
+    animation: fadein_one 3s;
 }
-
-
 
 @keyframes fadein_one {
-    0% { opacity: 0; }
-    50%   { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

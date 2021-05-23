@@ -3,17 +3,20 @@ layout: default
 title: Blog | Nathan Drezner
 ---
 
-<div id='body-text' class='contact'>
-  <p>I have several side projects, with more on the way.</p><br><br>
+<div id="body-text" class="contact">
+    <p>I have several side projects, with more on the way.</p>
+    <br /><br />
 
-  {%- for post in site.posts -%}
-  {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
-  <h5>{{ post.date | date: date_format }}</h5>
-  <h2> {{ post.title | escape }}</h2>
-  <p>{{ post.excerpt }}</p>
+    {%- for post in site.posts -%} {%- assign date_format = site.date_format |
+    default: "%B %-d, %Y" -%}
+    <h5>{{ post.date | date: date_format }}</h5>
+    <h2>{{ post.title | escape }}</h2>
+    <p>{{ post.excerpt }}</p>
 
-  <p><a class="post-link" href="{{ post.url | relative_url }}">See more</a></p>
+    <p>
+        <a class="post-link" href="{{ post.url | relative_url }}">See more</a>
+    </p>
 
-  <br><br>
-  {%- endfor -%}
+    <br /><br />
+    {%- endfor -%}
 </div>

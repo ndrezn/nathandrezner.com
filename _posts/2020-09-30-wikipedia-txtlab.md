@@ -11,7 +11,6 @@ A paper I wrote studying specialization on Wikipedia was just published through 
 
 The code to generate the dataset is open source and accessible from my Github, and I wrote a [brief blog post](/2020/01/30/wikipedia-histories.html) about it. The dataset itself is accessible on [Harvard Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QQHEHL).
 
-
 From the synopsis of the paper on the .txtLab site:
 
 > One of the students in our lab, Nathan Drezner, has a new collaboration out entitled, “Everyday Specialization: The coherence of editorial communities on Wikipedia.”

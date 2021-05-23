@@ -17,51 +17,47 @@
 
 -->
 
-
-
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>{{ page.title }}</title>
+        <meta charset="utf-8" />
 
-<head>
-  <title>{{ page.title }}</title>
-  <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="/css/main.css" />
+        <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.png" />
+        <meta property="og:image" content="/assets/social-preview.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image:type" content="image/jpg" />
+        <meta property="og:image:width" content="1680" />
+        <meta property="og:image:height" content="1050" />
+    </head>
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css" />
-  <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.png" />
-  <meta property="og:image" content="/assets/social-preview.jpg">
-  <meta property="og:type" content="website">
-  <meta property="og:image:type" content="image/jpg">
-  <meta property="og:image:width" content="1680">
-  <meta property="og:image:height" content="1050">
+    <body>
+        <header>
+            <div id="location">
+                <a href="/">Nathan Drezner</a>
+                <div>Montréal, QC</div>
+            </div>
 
-</head>
+            <div id="nav">
+                <a class="page-link" href="/research">Research</a><br />
+                <a class="page-link" href="/photography">Photography</a><br />
+                <a class="page-link" href="/other">Other Work</a>
+            </div>
+        </header>
+        <footer>
+            <div id="footer">
+                <div id="email">
+                    <a href="mailto:nathan@drezner.com"
+                        >nathan (at) drezner (dot) com</a
+                    ><br />
+                </div>
+                <div style="margin-top: 10px">
+                    <a href="https://twitter.com/ndrezn">@ndrezn</a><br /><br />
+                </div>
+            </div>
+        </footer>
 
-
-<body>
-
-  <header>
-    <div id='location'>
-      <a href="/">Nathan Drezner</a>
-      <div>Montréal, QC</div>
-    </div>
-
-    <div id='nav'>
-      <a class='page-link ' href='/research'>Research</a><br>
-      <a class='page-link ' href='/photography'>Photography</a><br>
-      <a class='page-link ' href='/other'>Other Work</a>
-
-    </div>
-  </header>
-  <footer>
-    <div id='footer'>
-      <div id='email'><a href="mailto:nathan@drezner.com">nathan (at) drezner (dot) com</a><br></div>
-      <div style="margin-top:10px"><a href="https://twitter.com/ndrezn">@ndrezn</a><br><br></div>
-    </div>
-  </footer>
-
-  {{ content }}
-
-
-</body>
-
+        {{ content }}
+    </body>
 </html>

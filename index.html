@@ -2,26 +2,33 @@
 layout: default
 title: Nathan Drezner
 ---
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-<div class = 'contact'>
-	Developer at <a href="https://plotly.com">Plotly Graphs</a><br>
-	McGill University graduate in Computer Science and English<br>
-	Photographer<br><br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-	<div id="temparature_montreal"><div>
+<div class="contact">
+    Developer at <a href="https://plotly.com">Plotly Graphs</a><br />
+    McGill University graduate in Computer Science and English<br />
+    Photographer<br /><br />
+
+    <div id="temparature_montreal">
+        <div></div>
+        <script>
+            $.ajax({
+                url: 'https://api.darksky.net/forecast/46ebeec6f86f5b2543b23fb9a8c898b1/45.5581968,-73.8516462',
+
+                jsonp: 'callback',
+
+                dataType: 'jsonp',
+                success: function (data) {
+                    //console.log( data.minutely.summary); // server response
+                    $('#temparature_montreal').html(
+                        "It's " +
+                            data.currently.summary.toLowerCase() +
+                            ' in Montréal.'
+                    );
+                },
+                // POWERED BY DARK SKY
+            });
+        </script>
+    </div>
 </div>
-<script>
-  $.ajax({
-        url: "https://api.darksky.net/forecast/46ebeec6f86f5b2543b23fb9a8c898b1/45.5581968,-73.8516462",
-
-        jsonp: "callback",
-
-        dataType: "jsonp",
-        success: function(data) {
-            //console.log( data.minutely.summary); // server response
-            $('#temparature_montreal').html("It's " + data.currently.summary.toLowerCase()+" in Montréal.");
-        }
-        // POWERED BY DARK SKY
-    });
-</script>
