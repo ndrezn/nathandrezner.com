@@ -10,14 +10,14 @@ In early December 2021, I visited the Broad Museum during a visit to Los Angeles
 </div>
 <div style="text-align:center; margin: 0 auto;"><small >Jeff Koons's <i>Rabbit</i>. Not great, not terrible.</small></div>
 
-I talked for a bit to one of the staff members in the room with the sculpture, who mentioned off-hand that the sculpture had sold for more than $150 million. I took a look at the Wikipedia article on the most expensive sales: [List of most expensive artworks by living artists](https://en.wikipedia.org/wiki/List_of_most_expensive_artworks_by_living_artists). Turns out that <i>Rabbit</i> actually sold for $91.1 million, a lower number but still confirming the insanity that is modern art collection, appreciation, and sales.
+I talked for a bit with one of the staff members in the room with the sculpture, who mentioned off-hand that the sculpture had sold for more than $150 million. I took a look at the Wikipedia article on the most expensive sales: [List of most expensive artworks by living artists](https://en.wikipedia.org/wiki/List_of_most_expensive_artworks_by_living_artists). Turns out that <i>Rabbit</i> actually sold for $91.1 million, a lower number but still confirming the insanity that is modern art collection, appreciation, and sales.
 
 <div class='image-line2'>
 	<img class='photo' src="/images/blog/first_edit.jpg">
 </div>
 <div style="text-align:center; margin: 0 auto;"><small >My only edit on the article, in late December 2021.</small></div>
 
-Two sales on the list were by artists I didn't know. Both were sales of NFTs at around $70 and $90 million and both sold in 2021. I didn't recoginze either NFT creator. The Wikipedia entry on one, [Pak](<https://en.wikipedia.org/wiki/Pak_(creator)>), [read like marketing](https://en.wikipedia.org/wiki/Wikipedia:Articles_for_deletion/Murat_Pak), and the sources for the sale on the list article were ambiguous. I removed the item from the list of artworks and cleaned up the Pak article a bit, simultaneously opening a conversation on the [talk page](https://en.wikipedia.org/wiki/Talk:List_of_most_expensive_artworks_by_living_artists) about the change I'd made.
+Two sales on the list were by artists I didn't know. Both were sales of NFTs at around $70 and $90 million and both sold in 2021. I didn't recoginze either NFT creator. The Wikipedia entry on one, [Pak](<https://en.wikipedia.org/wiki/Pak_(creator)>), [read like marketing](https://en.wikipedia.org/wiki/Wikipedia:Articles_for_deletion/Murat_Pak), and the sources for the sale on the list article were ambiguous. I removed the item from the list of artworks and cleaned up the Pak article a bit, simultaneously opening a conversation on the [talk page](https://en.wikipedia.org/wiki/Talk:List_of_most_expensive_artworks_by_living_artists) about the change I'd made. I'd made [similar changes](https://en.wikipedia.org/w/index.php?title=Miquela&type=revision&diff=855334389&oldid=855016829&diffmode=source) before to an entry on the digital "influencer" [Miquela](https://en.wikipedia.org/wiki/Miquela), another article about a digital creator that appeared to have been written by editors with a significant conflict of interest.
 
 <div class='image-line2'>
 	<img class='photo' src="/images/blog/mens.jpg">
