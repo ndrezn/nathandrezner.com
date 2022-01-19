@@ -1,9 +1,9 @@
 ---
 layout: post
-title: NFTs and Wikipedia
+title: Getting doxxed and hanging out on Wikipedia
 ---
 
-In early December 2021, I visited the Broad Museum during a visit to Los Angeles. It's a public museum that hosts the private collection of Eli and Edyth Broad, a billionare philanthropist couple who generated their wealth in the insurance business. They have on display there <i>Rabbit</i>, a notable Jeff Koons sculpture.
+In early December 2021, I visited the Broad Museum in Los Angeles. It's a public museum that hosts the private collection of Eli and Edyth Broad, a billionare philanthropist couple who generated their wealth in the insurance business. They have on display there <i>Rabbit</i>, a notable Jeff Koons sculpture.
 
 <div class='image-line2'>
 	<img class='photo' src="/images/blog/koons.jpg">
@@ -55,4 +55,4 @@ As of time of publishing, both NFTs have been removed from the list (I didn't [d
 </div>
 <div style="text-align:center; margin: 0 auto;"><small >New day, new article.</small></div>
 
-At the end of the day, it's worth remembering that Wikipedia isn't an arbiter of knowledge or a source of breaking news, even though it's sometimes read that way. It's just a bunch of weirdos paraphrasing secondary sources to the best of their ability. Since being drawn back into the honeypot of Wikipedia editing, I've published a [new article](<https://en.wikipedia.org/wiki/Ciel_(musician)>) and have a couple more in their draft stages. These conversations are interesting: I'd encourage more folks to sign up, start editing, and come hang out with me on talk pages.
+At the end of the day, it's worth remembering that Wikipedia isn't an arbiter of knowledge or a source of breaking news, even though it's sometimes read that way. It's a slow moving, constantly changing archive of the outside world. There's no greater agenda. Since being drawn back into the honeypot of Wikipedia editing, I've published a [new article](<https://en.wikipedia.org/wiki/Ciel_(musician)>) and have a couple more in their draft stages. These conversations are interesting: I'd encourage more folks to sign up, start editing, and come hang out with me on talk pages.
