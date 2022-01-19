@@ -3,7 +3,7 @@ layout: post
 title: NFTs and Wikipedia
 ---
 
-In early December 2021, I visited the Broad Museum during a visit to Los Angeles. It's a public museum that hosts the private collection of Eli and Edyth Broad, a billionare philanthropist couple who generated their wealth from the insurance business. They have on display there <i>Rabbit</i>, a notable Jeff Koons sculpture.
+In early December 2021, I visited the Broad Museum during a visit to Los Angeles. It's a public museum that hosts the private collection of Eli and Edyth Broad, a billionare philanthropist couple who generated their wealth in the insurance business. They have on display there <i>Rabbit</i>, a notable Jeff Koons sculpture.
 
 <div class='image-line2'>
 	<img class='photo' src="/images/blog/koons.jpg">
@@ -17,7 +17,7 @@ I talked for a bit with one of the staff members in the room with the sculpture,
 </div>
 <div style="text-align:center; margin: 0 auto;"><small >My only edit on the article, in late December 2021.</small></div>
 
-Two sales on the list were by artists I didn't know. Both were sales of NFTs at around $70 and $90 million and both sold in 2021. I didn't recoginze either NFT creator. The Wikipedia entry on one, [Murat Pak](<https://en.wikipedia.org/wiki/Pak_(creator)>), [read like marketing](https://en.wikipedia.org/wiki/Wikipedia:Articles_for_deletion/Murat_Pak), and the sources for the sale on the list article were ambiguous. I removed the item from the list of artworks and cleaned up the Pak article a bit, simultaneously opening a conversation on the [talk page](https://en.wikipedia.org/wiki/Talk:List_of_most_expensive_artworks_by_living_artists) about the change I'd made. I'd made [similar changes](https://en.wikipedia.org/w/index.php?title=Miquela&type=revision&diff=855334389&oldid=855016829&diffmode=source) before to an entry on the digital "influencer" [Miquela](https://en.wikipedia.org/wiki/Miquela), another article about a digital creator that appeared to have been written by editors with a significant conflict of interest.
+Two sales on the list were by artists I didn't know. Both were sales of NFTs at around $70 and $90 million, and both sold in 2021. I didn't recoginze the names of the people who created either. The Wikipedia entry on one of the creators, [Murat Pak](<https://en.wikipedia.org/wiki/Pak_(creator)>), [read like marketing](https://en.wikipedia.org/wiki/Wikipedia:Articles_for_deletion/Murat_Pak), and the sources for the sale on the list article were ambiguous. I removed the item from the list of artworks and cleaned up the Pak article a bit, simultaneously opening a conversation on the [talk page](https://en.wikipedia.org/wiki/Talk:List_of_most_expensive_artworks_by_living_artists) about the change I'd made. I'd made [similar changes](https://en.wikipedia.org/w/index.php?title=Miquela&type=revision&diff=855334389&oldid=855016829&diffmode=source) before to an entry on the digital "influencer" [Miquela](https://en.wikipedia.org/wiki/Miquela), another article about a digital creator that appeared to have been written by editors with a significant conflict of interest.
 
 <div class='image-line2'>
 	<img class='photo' src="/images/blog/mens.jpg">
