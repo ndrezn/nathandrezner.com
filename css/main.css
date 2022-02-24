@@ -10,6 +10,17 @@ a {
     color: #000;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        color: lightgray;
+        background: #121212;
+    }
+
+    body a {
+        color: white;
+    }
+}
+
 a:hover {
     font-style: italic;
 }
