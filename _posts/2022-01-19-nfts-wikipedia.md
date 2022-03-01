@@ -56,3 +56,16 @@ As of time of publishing, both NFTs have been removed from the list (I didn't [d
 <div style="text-align:center; margin: 0 auto;"><small >New day, new article.</small></div>
 
 At the end of the day, it's worth remembering that Wikipedia isn't an arbiter of knowledge or a source of breaking news, even though it's sometimes read that way. It's a slow moving, constantly changing archive of the outside world. There's no greater agenda. Since being drawn back into the honeypot of Wikipedia editing, I've published a [new article](<https://en.wikipedia.org/wiki/Ciel_(musician)>) and have a couple more in their draft stages. These conversations are interesting: I'd encourage more folks to sign up, start editing, and come hang out with me on talk pages.
+
+<br>
+<br>
+<hr>
+
+<i>Update, March 1 2022.</i>
+
+<div class='image-line2'>
+	<img class='photo' src="/images/blog/nft_sale_tweet.jpeg">
+    <img class='photo' src="/images/blog/montage.jpeg">
+    <img class='photo' src="/images/blog/sale_history.jpeg">
+</div>
+<div style="text-align:center; margin: 0 auto;"><small >Someone selling a tweet I wrote about the whole thing as a series of NFTs, one of which sold for about $200USD at time of writing. As the original author, I extremely have limited control over my work, beyond posting a complaint to OpenSea. </small></div>
