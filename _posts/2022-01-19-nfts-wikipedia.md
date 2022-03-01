@@ -68,4 +68,4 @@ At the end of the day, it's worth remembering that Wikipedia isn't an arbiter of
     <img class='photo' src="/images/blog/montage.jpeg">
     <img class='photo' src="/images/blog/sale_history.jpeg">
 </div>
-<div style="text-align:center; margin: 0 auto;"><small >Someone selling a tweet I wrote about the whole thing as a series of NFTs, one of which sold for about $200USD at time of writing. As the original author, I extremely have limited control over my work, beyond posting a complaint to OpenSea. </small></div>
+<div style="text-align:center; margin: 0 auto;"><small >Someone selling a tweet I wrote about the whole thing as a series of NFTs, one of which sold for about $200USD at time of writing. As the original author, I extremely have limited control over my work, beyond registering a complaint with OpenSea. </small></div>
