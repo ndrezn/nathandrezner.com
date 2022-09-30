@@ -13,5 +13,5 @@ bundle install
 Serve locally using [Jekyll](https://jekyllrb.com/):
 
 ```
-jekyll serve
+bundle exec jekyll serve
 ```
