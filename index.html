@@ -19,20 +19,20 @@ title: Nathan Drezner
         <div></div>
         <script>
             $.ajax({
-                url: 'https://api.darksky.net/forecast/46ebeec6f86f5b2543b23fb9a8c898b1/45.5581968,-73.8516462',
+                url: 'https://api.weatherbit.io/v2.0/current?lat=45.5581968&lon=-73.8516462&key=2f61a52ba2ad48d7963e83269b4199e4&include=minutely',
 
                 jsonp: 'callback',
 
                 dataType: 'jsonp',
                 success: function (data) {
-                    //console.log( data.minutely.summary); // server response
                     $('#temparature_montreal').html(
                         "It's " +
-                            data.currently.summary.toLowerCase() +
-                            ' in Tiohtià:ke (fr/en: Montréal).'
+                            data.data[0].weather.description.toLowerCase() +
+                            ' and ' +
+                            data.data[0].temp +
+                            '°C in Tiohtià:ke (fr/en: Montréal).'
                     );
                 },
-                // POWERED BY DARK SKY
             });
         </script>
     </div>
