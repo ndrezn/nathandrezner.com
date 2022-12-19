@@ -9,6 +9,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 4.2.0"
 gem "webrick", "~> 1.7"
+gem "ffi", "~> 1.15.5"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
