@@ -23,20 +23,8 @@ a {
 }
 
 @media (max-device-width: 900px) {
-    #location {
-        font-size: 2em;
-    }
-
-    #nav {
-        font-size: 2em;
-    }
-
-    #footer {
-        font-size: 2em;
-    }
-
-    .music-item {
-        font-size: 2em;
+    body {
+        font-size: 2.5em;
     }
 }
 
