@@ -23,28 +23,28 @@ a {
 }
 
 @media (max-device-width: 900px) {
-    #location{
-        font-size: 2em
+    #location {
+        font-size: 2em;
     }
 
     #nav {
-        font-size: 2em
+        font-size: 2em;
     }
 
     #footer {
-        font-size: 2em
+        font-size: 2em;
     }
 
     .music-item {
-        font-size: 2em
+        font-size: 2em;
     }
 }
 
-@media (max-device-width: 900px), (max-width: 700px) {   
+@media (max-device-width: 900px), (max-width: 700px) {
     #body-text {
-        width: 90%
+        width: 90%;
     }
-    
+
     header {
         display: flex;
         justify-content: space-between;
@@ -123,7 +123,6 @@ a:hover {
     margin: bottom 30px;
 }
 
-
 .photo {
     padding: 5px;
     width: 33%;
@@ -169,4 +168,3 @@ a:hover {
         opacity: 1;
     }
 }
-
