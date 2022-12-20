@@ -4,6 +4,7 @@ body {
     font-style: normal;
     color: #686867;
     letter-spacing: 0.1px;
+    line-height: 1.4;
 }
 
 a {
@@ -76,6 +77,13 @@ a:hover {
     position: relative;
     align-items: center;
 }
+
+.music-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
 
 .photo {
     padding: 5px;
