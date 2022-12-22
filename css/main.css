@@ -1,9 +1,10 @@
 body {
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-size: 16px;
+    font-size: 1em;
     font-style: normal;
     color: #686867;
     letter-spacing: 0.1px;
+    line-height: 1.4;
 }
 
 a {
@@ -18,6 +19,31 @@ a {
 
     body a {
         color: white;
+    }
+}
+
+@media (max-device-width: 900px) {
+    body {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-device-width: 900px), (max-width: 700px) {
+    #body-text {
+        width: 90%;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #location {
+        position: relative !important;
+    }
+
+    #nav {
+        position: relative !important;
     }
 }
 
@@ -57,7 +83,7 @@ a:hover {
 }
 
 .contact {
-    width: 50%;
+    width: min(50%, 700px);
     margin: 0 auto;
     padding-top: 200px;
     animation: fadein_one 1s;
@@ -75,6 +101,14 @@ a:hover {
     justify-content: space-around;
     position: relative;
     align-items: center;
+}
+
+.music-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: top 30px;
+    margin: bottom 30px;
 }
 
 .photo {
