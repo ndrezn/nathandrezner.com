@@ -49,11 +49,9 @@ var time, h, m, s;
 function timeNow() {
     time = new Date();
     const zeroPad = (num, places) => String(num).padStart(places, '0');
+
     h = zeroPad(time.getHours(), 2);
     m = zeroPad(time.getMinutes(), 2);
     s = zeroPad(time.getSeconds(), 2);
-    if (s < 10) {
-        s = '0' + s;
-    } /* we add a 0 in front of s, when it is lower than 10, because that's what most clocks display, this is for the human user rather than for any need by the computer */
     document.getElementById('time').innerHTML = h + ':' + m + ':' + s;
 }
