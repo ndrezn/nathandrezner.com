@@ -3,7 +3,7 @@ layout: post
 title: Depths of Wikipedia & transit syntax
 ---
 
-I had a ton of fun this weekend joining Annie Rauwerda (aka [@depthsofwikipedia](https://www.instagram.com/depthsofwikipedia/)) as a guest for her Montréal stop as part of her live tour. I spoke a bit about my work on local Wikipedia -- like the article on [Snow removal in Montreal](https://en.wikipedia.org/wiki/Snow_removal_in_Montreal) and the [Montreal Metro route diagram](https://en.wikipedia.org/wiki/Template:Montreal_Metro_route_diagram) (and my [brush with craziness](/2022/01/19/nfts-wikipedia.html) by means of art and NFTs last year).
+I had a ton of fun this weekend joining Annie Rauwerda (aka [@depthsofwikipedia](https://www.instagram.com/depthsofwikipedia/)) as a guest for the Montréal stop of her live tour. I spoke a bit about my work on local Wikipedia -- like the article on [Snow removal in Montreal](https://en.wikipedia.org/wiki/Snow_removal_in_Montreal) and the [Montreal Metro route diagram](https://en.wikipedia.org/wiki/Template:Montreal_Metro_route_diagram) (and my [brush with craziness](/2022/01/19/nfts-wikipedia.html) by means of art and NFTs last year).
 
 It was a ton of fun! Annie's show is fantastic: It covers some of the wackiest Wikipedia articles rapid-fire (and has the best parody of "We Didn't Start a Fire" I've heard). Thank you to Annie for the invite! And of course for anyone who hasn't seen Annie's work, make sure to go follow Depths of Wikipedia on all the social medias. It's a wonderful account.
 
@@ -12,7 +12,7 @@ It was a ton of fun! Annie's show is fantastic: It covers some of the wackiest W
 </div>
 <div style="text-align:center; margin: 0 auto;"><small >Joining Annie as a guest for "Depths of Wikipedia: Live!" on April 22nd. I was terrible at the trivia (but gave it my best shot).</small></div>
 
-What I actually want to use this post for is to discuss how route diagrams work on Wikipedia -- something I presented briefly during the show. Let's start at the very beginning.
+Something I presented briefly during the show was how route diagrams work on Wikipedia. Earlier this year, I built a metro route diagram for the Montréal metro system (you can see it live in the [article for the Montreal metro](https://en.wikipedia.org/wiki/Montreal_Metro)'s infobox; it's under the "System map" header) -- it was a ton of fun. And uncovered plenty of interesting subtleties in the context of both metro map design in general and information distribution on Wikipedia
 
 Route diagrams on Wikipedia look like this:
 
