@@ -6,7 +6,7 @@ const generate_scatter = (dataset, id) => {
                 y: dataset['rating'],
                 text: dataset['hovertext'],
                 mode: 'markers',
-                type: 'scatter',
+                type: 'scattergl',
                 transforms: [
                     {
                         type: 'groupby',
