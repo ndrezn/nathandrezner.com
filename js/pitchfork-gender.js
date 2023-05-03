@@ -123,7 +123,7 @@ const generate_stacked_bar = (dataset, id, groupby_column) => {
 
 const generate_histogram = (dataset, id) => {
     // Better category labels
-    dataset['bnm'] = dataset['bnm'].map((is_bnm) =>
+    dataset['bnm_cat'] = dataset['bnm'].map((is_bnm) =>
         is_bnm ? 'BNM' : 'Standard'
     );
     let scatter_chart = {
@@ -135,7 +135,7 @@ const generate_histogram = (dataset, id) => {
                 transforms: [
                     {
                         type: 'groupby',
-                        groups: dataset['bnm'],
+                        groups: dataset['bnm_cat'],
                     },
                 ],
                 hovertemplate:
@@ -213,6 +213,8 @@ fetch('/data/pitchfork_dataset.json')
         // Best new music filtering
         const {bnm, ...rest} = pitchfork_data;
         let bnm_reviews = filterAll(bnm, rest, Boolean);
+
+        console.log(bnm_reviews);
 
         // Best new music charts
         generate_box(bnm_reviews, 'bnm-box-plot');
