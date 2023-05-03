@@ -12,7 +12,7 @@ Artist gender is determined based on pronouns used in the lede of the article.
 <div style="text-align:center; margin: 0 auto;"><small >Year-by-year score aggregations. Fewer extreme low scores are given out over time, and the middle 50% of scores narrows from a span of 1.8 to 0.7. The real average hovers closer to 7.4, not <a href='https://www.theonion.com/pitchfork-gives-music-6-8-1819569318'><i>The Onion</i>'s 6.8</a>. </small></div>
 
 <div id='histogram' style='min-height: 500px'></div>
-<div style="text-align:center; margin: 0 auto;"><small >Distribution of ratings for all Best New Music and non-Best New Music reviews.</small></div>
+<div style="text-align:center; margin: 0 auto;"><small >Distribution of ratings for all Best New Music and non-Best New Music reviews. There are disporportionate peaks on whole numbers: This effect materializes the worst at 7.0 and 8.0. Reminds me of peaks by gender for <a href='https://twitter.com/alexselbyb/status/1650101850782179333'>marathon finish times</a>.</small></div>
 
 <div id='stacked-bar' style='min-height: 500px'></div>
 <div style="text-align:center; margin: 0 auto;"><small >Count of reviews over year, grouped by gender. Pitchfork has been surprisingly consistent in its editorial output since its inception, and there are far more women artists represented over time.</small></div>

@@ -1,5 +1,14 @@
 // Charts
 
+const default_font = {
+    color:
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'lightgray'
+            : '#686867',
+    family: 'Century Gothic, CenturyGothic, AppleGothic, sans-serif;',
+};
+
 const generate_scatter = (dataset, id) => {
     let scatter_chart = {
         data: [
@@ -35,6 +44,7 @@ const generate_scatter = (dataset, id) => {
                 title: 'Rating',
                 zeroline: false,
             },
+            font: default_font,
         },
     };
 
@@ -57,6 +67,7 @@ const generate_box = (dataset, id) => {
             },
         ],
         layout: {
+            font: default_font,
             paper_bgcolor: 'rgba(0,0,0,0)',
             plot_bgcolor: 'rgba(0,0,0,0)',
             margin: {t: 30, b: 30, l: 30, r: 2},
@@ -104,6 +115,7 @@ const generate_stacked_bar = (dataset, id, groupby_column) => {
         layout: {
             paper_bgcolor: 'rgba(0,0,0,0)',
             plot_bgcolor: 'rgba(0,0,0,0)',
+            font: default_font,
             margin: {t: 30, b: 30, l: 50, r: 2},
             hovermode: 'closest',
             barmode: 'stack',
@@ -157,6 +169,7 @@ const generate_histogram = (dataset, id) => {
                 title: 'Count',
                 zeroline: false,
             },
+            font: default_font,
         },
     };
 
