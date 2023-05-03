@@ -9,13 +9,15 @@ title: Pitchfork Gender
 Words words words
 
 <div id='scatter-summary' style='min-height: 500px'></div>
-<div style="text-align:center; margin: 0 auto;"><small >Every review ever given by Pitchfork -- select specific categories by clicking on the key on the right, and hover on points to see more information.</small></div>
+<div style="text-align:center; margin: 0 auto;"><small >Every review ever given by Pitchfork -- select specific categories by clicking on the key on the right, and hover on points to see more information. In the case of multi-reviews with multiple scores, we're taking the highest individual score.</small></div>
 
 <div id='box-plot' style='min-height: 500px'></div>
-<div style="text-align:center; margin: 0 auto;"><small >Year-by-year score aggregations. Fewer extreme low scores are given out over time, and the middle 50% of scores narrows from a span of 1.8 to 0.7. The real average hovers closer to 7.4, not <a href='https://www.theonion.com/pitchfork-gives-music-6-8-1819569318'><i>The Onion</i>'s 6.8.</a></small></div>
+<div style="text-align:center; margin: 0 auto;"><small >Year-by-year score aggregations. Fewer extreme low scores are given out over time, and the middle 50% of scores narrows from a span of 1.8 to 0.7. The real average hovers closer to 7.4, not <a href='https://www.theonion.com/pitchfork-gives-music-6-8-1819569318'><i>The Onion</i>'s 6.8</a>. </small></div>
 
 <div id='stacked-bar' style='min-height: 500px'></div>
 <div style="text-align:center; margin: 0 auto;"><small >Count of reviews over year, grouped by gender. Pitchfork has been surprisingly consistent in its editorial output since its inception, and there are far more women artists represented over time.</small></div>
+
+## Best New Music
 
 <div id='bnm-scatter-summary' style='min-height: 500px'></div>
 <div style="text-align:center; margin: 0 auto;"><small >All Best New Music reviews.</small></div>

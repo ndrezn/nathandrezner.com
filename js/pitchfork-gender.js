@@ -80,7 +80,7 @@ const generate_stacked_bar = (dataset, id, groupby_column) => {
                 x: dataset['pubYear'],
                 y: dataset['rating'],
                 type: 'bar',
-                text: dataset['artist_gender'],
+                text: dataset[groupby_column],
                 hovertemplate:
                     '%{text}<br><br>' +
                     '%{yaxis.title.text}: %{y}<br>' +
@@ -119,11 +119,15 @@ const generate_stacked_bar = (dataset, id, groupby_column) => {
     Plotly.newPlot(id, chart.data, chart.layout);
 };
 
-function getAverage(str) {
-    const nums = str.match(/\d+(\.\d+)?/g).map(Number);
-    const sum = nums.reduce((acc, val) => acc + val, 0);
-    const avg = sum / nums.length;
-    return avg;
+function getMax(str) {
+    let max;
+    if (str !== 'unknown') {
+        const nums = str.match(/\d+(\.\d+)?/g).map(Number);
+        max = Math.max.apply(null, nums);
+    } else {
+        max = null;
+    }
+    return max;
 }
 
 function filterAll(filterCol, dataset, condition) {
@@ -152,21 +156,21 @@ fetch('/data/pitchfork_dataset.json')
         pitchfork_data['pubYear'] = pitchfork_data['pubDate'].map((date, i) =>
             date.slice(0, 4)
         );
+        // For multi-reviews, just take the best score
+        pitchfork_data['rating'] = pitchfork_data['rating'].map(getMax);
 
         // Generate our figures
         generate_scatter(pitchfork_data, 'scatter-summary');
         generate_box(pitchfork_data, 'box-plot');
         generate_stacked_bar(pitchfork_data, 'stacked-bar', 'artist_gender');
 
-        // best new music
+        // Best new music filtering
         const {bnm, ...rest} = pitchfork_data;
         let bnm_reviews = filterAll(bnm, rest, Boolean);
-        console.log(bnm_reviews.length);
 
-        bnm_reviews['rating'] = bnm_reviews['rating'].map(getAverage);
+        // Best new music charts
         generate_box(bnm_reviews, 'bnm-box-plot');
         generate_scatter(bnm_reviews, 'bnm-scatter-summary');
-
         generate_stacked_bar(bnm_reviews, 'bnm-stacked-bar', 'artist_gender');
         generate_stacked_bar(
             bnm_reviews,
