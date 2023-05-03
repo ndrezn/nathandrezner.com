@@ -1,3 +1,5 @@
+// Charts
+
 const generate_scatter = (dataset, id) => {
     let scatter_chart = {
         data: [
@@ -119,6 +121,49 @@ const generate_stacked_bar = (dataset, id, groupby_column) => {
     Plotly.newPlot(id, chart.data, chart.layout);
 };
 
+const generate_histogram = (dataset, id) => {
+    // Better category labels
+    dataset['bnm'] = dataset['bnm'].map((is_bnm) =>
+        is_bnm ? 'BNM' : 'Standard'
+    );
+    let scatter_chart = {
+        data: [
+            {
+                x: dataset['rating'],
+                type: 'histogram',
+                opacity: 0.8,
+                transforms: [
+                    {
+                        type: 'groupby',
+                        groups: dataset['bnm'],
+                    },
+                ],
+                hovertemplate:
+                    '%{yaxis.title.text}: %{y}<br>' +
+                    '%{xaxis.title.text}: %{x}<br>' +
+                    '<extra></extra>',
+            },
+        ],
+        layout: {
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            margin: {t: 30, b: 30, l: 50, r: 2},
+            barmode: 'overlay',
+            xaxis: {
+                title: 'Score',
+                zeroline: false,
+            },
+            yaxis: {
+                title: 'Count',
+                zeroline: false,
+            },
+        },
+    };
+
+    Plotly.newPlot(id, scatter_chart.data, scatter_chart.layout);
+};
+
+// Helpers
 function getMax(str) {
     let max;
     if (str !== 'unknown') {
@@ -163,6 +208,7 @@ fetch('/data/pitchfork_dataset.json')
         generate_scatter(pitchfork_data, 'scatter-summary');
         generate_box(pitchfork_data, 'box-plot');
         generate_stacked_bar(pitchfork_data, 'stacked-bar', 'artist_gender');
+        generate_histogram(pitchfork_data, 'histogram');
 
         // Best new music filtering
         const {bnm, ...rest} = pitchfork_data;
