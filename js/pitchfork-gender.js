@@ -214,6 +214,63 @@ const generate_histogram = (dataset, id, group, barmode) => {
     Plotly.newPlot(id, scatter_chart.data, scatter_chart.layout);
 };
 
+const generate_qq = (dataset, id) => {
+    // Generate some normally distributed data
+    var data = [];
+    for (var i = 0; i < 100; i++) {
+        data.push(d3.randomNormal(0, 1)());
+    }
+
+    // Sort the data
+    data.sort(function (a, b) {
+        return a - b;
+    });
+
+    // Generate the theoretical quantiles
+    var quantiles = [];
+    for (var i = 1; i < data.length + 1; i++) {
+        quantiles.push(jStat.normal.inv((i - 0.5) / data.length, 0, 1));
+    }
+
+    // Create the trace
+    var trace = {
+        x: quantiles,
+        y: data,
+        mode: 'markers',
+        type: 'scatter',
+        name: 'Data',
+    };
+
+    // Add the diagonal line
+    var diagonal = {
+        x: [-3, 3],
+        y: [-3, 3],
+        mode: 'lines',
+        line: {
+            color: 'black',
+            dash: 'dash',
+        },
+        name: 'Diagonal',
+    };
+
+    // Create the layout
+    var layout = {
+        xaxis: {
+            title: 'Theoretical quantiles',
+        },
+        yaxis: {
+            title: 'Sample quantiles',
+        },
+        title: 'Q-Q plot',
+    };
+
+    // Create the plot data array
+    var data = [trace, diagonal];
+
+    // Create the plot
+    Plotly.newPlot('myDiv', data, layout);
+};
+
 // Helpers
 function getMax(str) {
     let max;
