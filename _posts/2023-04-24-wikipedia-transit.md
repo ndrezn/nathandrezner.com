@@ -12,7 +12,7 @@ It was a ton of fun! Annie's show is fantastic: It covers some of the wackiest W
 </div>
 <div style="text-align:center; margin: 0 auto;"><small >Joining Annie as a guest for "Depths of Wikipedia: Live!" on April 22nd. I was terrible at the trivia (but gave it my best shot).</small></div>
 
-Something I presented briefly during the show was how route diagrams work on Wikipedia. Earlier this year, I built a metro route diagram for the Montréal metro system (you can see it live in the [article for the Montreal metro](https://en.wikipedia.org/wiki/Montreal_Metro)'s infobox; it's under the "System map" header) -- it was a ton of fun. And uncovered plenty of interesting subtleties in the context of both metro map design in general and information distribution on Wikipedia
+Something I presented briefly during the show was how route diagrams work on Wikipedia. Earlier this year, I built a metro route diagram for the Montréal metro system (you can see it live in the [article for the Montreal metro](https://en.wikipedia.org/wiki/Montreal_Metro)'s infobox; it's under the "System map" header) -- it was a ton of fun. And uncovered plenty of interesting subtleties in the context of both metro map design in general and information distribution on Wikipedia.
 
 Route diagrams look like this:
 
@@ -120,7 +120,7 @@ I spent some time putting together a flattened route diagram for the Montreal me
 </div>
 <div style="text-align:center; margin: 0 auto;"><small >The <a href='https://en.wikipedia.org/wiki/Template:Montreal_Metro_route_diagram'>route diagram</a> for Montreal which I started and, along with several other editors, helped bring to the finish line. It may just have changed more since the publication of this article.</small></div>
 
-I love the way it's turned out. If you look at it on its side, you can make out the shape of the geographic system diagram, where the orange line makes a big U as it intersects with the other three lines. The right side represents the northern end of the syste,, the left side represents the southern end of the system... It's surprisingly familiar.
+I love the way it's turned out. If you look at it on its side, you can make out the shape of the geographic system diagram, where the orange line makes a big U as it intersects with the other three lines. The right side represents the northern end of the system, the left side represents the southern end of the system... It's surprisingly familiar.
 
 Wikipedia is a tertiary source of information, where verifiability is a core tenent. But as a consequence of some combination of the sheer popularity of Wikipedia, ease of modifying it, and the necessity of organization, Wikipedia sometimes introduces novel ideas, either deliberately or by accident.
 
@@ -131,11 +131,11 @@ For example, the idea of video game "console generations" is a construct stemmin
 </div>
 <div style="text-align:center; margin: 0 auto;"><small >Citogenesis, from <a href='https://xkcd.com/978'><i>xkcd</i></a>.</small></div>
 
-Even more extreme versions of this are those of mostly bad-faith "[citogenesis](https://en.wikipedia.org/wiki/Wikipedia:List_of_citogenesis_incidents)" (a term coined by Randall Monroe in [_xkcd_](https://xkcd.com/978/)), where reliable sources are created for hoax Wikipedia content by means of circular reporting. For example, the name "Julius Pringle" for the Pringles mascot was made up by some Wikipedia editor but by 2013 was formally acknowledged and in fact adopted by Kellogg as the official name of their moustachioed figurehead (another thanks to Annie for pointing me to this one).
+Even more extreme versions of this are those of mostly bad-faith "[citogenesis](https://en.wikipedia.org/wiki/Wikipedia:List_of_citogenesis_incidents)" (a term coined by Randall Monroe in [_xkcd_](https://xkcd.com/978/)), where reliable sources are created for hoax Wikipedia content by means of circular reporting. For example, the name "[Julius Pringle](https://en.wikipedia.org/wiki/Pringles#Marketing)" for the Pringles mascot was made up by some Wikipedia editor but by 2013 was formally acknowledged and in fact adopted by Kellogg as the official name of their moustachioed figurehead (another thanks to Annie for pointing me to this one).
 
 In the context of transit maps, the actual flattened diagram I made has no real-world counterpart, beyond the fact that yes, those stations do connect to each other in that order. It's a diagram that has never been used in any form by the city of Montreal, but it's still reliable and informative enough to be used on Wikipedia. The route diagram I made was actually submitted to the mainspace via Articles for Creation, which means it was formally reviewed by another editor before being approved (which isn't strictly necessary). It doesn't have any citations.
 
-This isn't to suggest it's a bad faith contribution; instead, this metro diagram lies in the gray area of tertiary information.
+This isn't to suggest it's a bad faith contribution: Instead, it's to acknowledge that this metro diagram lies in the gray area of tertiary information on Wikipedia.
 
 <div class='image-line2'>
 	<img class='photo' src="/images/blog/wikipedia_transit/Metro_de_Montreal_-_010.jpg" style='width: 350px'>
