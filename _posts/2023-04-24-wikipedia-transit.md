@@ -3,7 +3,7 @@ layout: post
 title: Depths of Wikipedia & transit syntax
 ---
 
-I had a ton of fun this weekend joining Annie Rauwerda (aka [@depthsofwikipedia](https://www.instagram.com/depthsofwikipedia/)) as a guest for the Montréal stop of her live tour. I spoke a bit about my work on local Wikipedia -- like the article on [Snow removal in Montreal](https://en.wikipedia.org/wiki/Snow_removal_in_Montreal) and the [Montreal Metro route diagram](https://en.wikipedia.org/wiki/Template:Montreal_Metro_route_diagram) (and my [brush with craziness](/2022/01/19/nfts-wikipedia.html) by means of art and NFTs last year).
+_Updated May 17, 2023_: I had a ton of fun this weekend joining Annie Rauwerda (aka [@depthsofwikipedia](https://www.instagram.com/depthsofwikipedia/)) as a guest for the Montréal stop of her live tour. I spoke a bit about my work on local Wikipedia -- like the article on [Snow removal in Montreal](https://en.wikipedia.org/wiki/Snow_removal_in_Montreal) and the [Montreal Metro route diagram](https://en.wikipedia.org/wiki/Template:Montreal_Metro_route_diagram) (and my [brush with craziness](/2022/01/19/nfts-wikipedia.html) by means of art and NFTs last year).
 
 It was a ton of fun! Annie's show is fantastic: It covers some of the wackiest Wikipedia articles rapid-fire (and has the best parody of "We Didn't Start a Fire" I've heard). Thank you to Annie for the invite! And of course for anyone who hasn't seen Annie's work, make sure to go follow Depths of Wikipedia on all the social medias. It's a wonderful account.
 
@@ -143,3 +143,15 @@ This isn't to suggest it's a bad faith contribution; instead, this metro diagram
 <div style="text-align:center; margin: 0 auto;"><small >The interior of a Montreal metro car, which doesn't contain the flattened diagram... yet. Image by Jeangagnon, CC BY-SA 4.0, via <a href='https://commons.wikimedia.org/wiki/File:Metro_de_Montreal_-_010.jpg'>Wikimedia Commons</a></small></div>
 
 Maybe, in a few years, I'll board a Montreal metro car and look up to the ceiling to see the diagram I started emblazoned in paint. If I ever do end up seeing that... I know I'll have truly made it, and wear citogenesizing a metro map into existence like a badge of honor.
+
+<br>
+
+<hr style="width:50%">
+
+<br>
+*Update, May 17 2023.*
+
+<div class='image-line2'>
+	<img class='photo' src="/images/blog/wikipedia_transit/nails.png" style='width: 350px'>
+</div>
+<div style="text-align:center; margin: 0 auto;"><small >The route diagram, but <a href='https://twitter.com/hotnails666420/status/1658638008063541248'>on someone's nails</a>! How incredible is this??? </small></div>
