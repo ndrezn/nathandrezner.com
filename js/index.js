@@ -1,23 +1,7 @@
-onload = function () {
-    var parent = document.getElementById('fadein');
-    var frag = document.createDocumentFragment();
-    if (parent !== null) {
-        while (parent.children.length) {
-            frag.appendChild(
-                parent.children[
-                    Math.floor(Math.random() * parent.children.length)
-                ]
-            );
-        }
-        parent.appendChild(frag);
-    }
-};
-
 $(window).on('load', function () {
     timeNow();
     setInterval(timeNow, 100);
 
-    onload();
     $(window)
         .scroll(function () {
             var windowBottom = $(this).scrollTop() + $(this).innerHeight();
