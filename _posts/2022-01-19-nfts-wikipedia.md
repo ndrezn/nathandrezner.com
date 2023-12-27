@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting doxxed and hanging out on Wikipedia
+social_preview: /images/blog/rfc.png
 ---
 
 In early December 2021, I visited the Broad Museum in Los Angeles. It's a public museum that hosts the private collection of Eli and Edyth Broad, a billionare philanthropist couple who generated their wealth in the insurance business. They have on display there <i>Rabbit</i>, a notable Jeff Koons sculpture.
