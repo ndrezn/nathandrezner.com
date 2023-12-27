@@ -25,7 +25,7 @@ You should be able to command+f to find what you’re looking for.
 	- Pick up a weekend metro pass or single pass, or buy an OPUS card and fill it with a few passes. It’s $3.50 per trip.
 	- The bus system is also excellent! And quite reliable.
 - I recommend using [**Transit App**](https://transitapp.com/) which is a great app for getting a travel itinerary using public transit in many cities, and in fact is a Montréal-based startup!
-- Avoid Uber. It’s expensive and surge fares are brutal. Instead, use the taxis. You can call to have a taxi pick you up: (514) 725-9885. Wait time is usually >5 minutes, quicker than an Uber.
+- Avoid Uber. It’s expensive and surge fares are brutal. Instead, use the taxis. You can call to have a taxi pick you up: (514) 725-9885. Wait time is usually <5 minutes, quicker than an Uber.
 - Definitely, definitely take a cab to/from the airport. The price is capped by the city at ~$45, unlike Uber, and if you have an early flight you can call to reserve a cab using the number above. It works great! 
 
 ## What to avoid
