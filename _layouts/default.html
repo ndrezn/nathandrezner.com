@@ -17,24 +17,35 @@
 
 -->
 
+{% if page.social_preview %}
+  {% assign social_image = page.social_preview %}
+{% else %}
+  {% assign default_image = '/assets/social-preview.jpg' %}
+  {% assign social_image = default_image %}
+  {% if page.content contains '<img ' %}
+    {% assign img_src = page.content | split: '<img ' %}
+    {% assign img_src = img_src[1] | split: 'src="' %}
+    {% assign img_src = img_src[1] | split: '"' %}
+    {% assign social_image = img_src[0] %}
+  {% endif %}
+{% endif %}
+
 <!DOCTYPE html>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 
-<html>
-    <head>
-        <title>{{ page.title }}</title>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="/css/main.css" />
-        <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.png" />
-        <link href="https://ravenation.club/@ndrezn" rel="me" />
-        <meta property="og:image" content="/assets/social-preview.jpg" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image:type" content="image/jpg" />
-        <meta property="og:image:width" content="1680" />
-        <meta property="og:image:height" content="1050" />
-    </head>
+<head>
+    <title>{{ page.title }}</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.png" />
+    <link href="https://ravenation.club/@ndrezn" rel="me" />
+    <meta property="og:image" content="{{ social_image | absolute_url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image:width" content="1680" />
+    <meta property="og:image:height" content="1050" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4EL00YGCHG"></script>
     <script>
@@ -44,35 +55,35 @@
 
     gtag('config', 'G-4EL00YGCHG');
     </script>
+</head>
+<body>
+    <header>
+        <div id="location">
+            <a href="/">Nathan Drezner</a>
+            <div>Montréal, QC</div>
+        </div>
 
-    <body>
-        <header>
-            <div id="location">
-                <a href="/">Nathan Drezner</a>
-                <div>Montréal, QC</div>
+        <div id="nav">
+            <a class="right" style="margin-top:0px" href="/research">Research</a>
+            <a class="right" style="margin-top:0px" href="/photography">Photography</a>
+            <a class="right" style="margin-top:0px" href="/other">Other Work</a>
+        </div>
+    </header>
+    {{ content }}
+    <footer>
+        <div id="footer">
+            <div id="email" class="right">
+                <a href="mailto:nathan@drezner.xyz"
+                    >nathan (at) drezner (dot) xyz</a
+                ><br />
             </div>
+            <div class="right">
+                <a href="https://twitter.com/ndrezn">@ndrezn</a
+                ><br />
+            </div>
+            <span id="time" class="right">00:00:00</span>
+        </div>
+    </footer>
+</body>
 
-            <div id="nav">
-                <a class="right" style="margin-top:0px" href="/research">Research</a>
-                <a class="right" style="margin-top:0px" href="/photography">Photography</a>
-                <a class="right" style="margin-top:0px" href="/other">Other Work</a>
-            </div>
-        </header>
-        {{ content }}
-        <footer>
-            <div id="footer">
-                <div id="email" class="right">
-                    <a href="mailto:nathan@drezner.xyz"
-                        >nathan (at) drezner (dot) xyz</a
-                    ><br />
-                </div>
-                <div class="right">
-                    <a href="https://twitter.com/ndrezn">@ndrezn</a
-                    ><br />
-                </div>
-                <span id="time" class="right">00:00:00</span>
-            </div>
-        </footer>
-    </body>
-</html>
 
