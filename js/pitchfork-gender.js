@@ -8,6 +8,79 @@ const default_font = {
     family: 'Century Gothic, CenturyGothic, AppleGothic, sans-serif;',
 };
 
+const colorway = [
+    '#00b4ff',
+    '#ff9222',
+    '#3949ab',
+    '#ff5267',
+    '#08bdba',
+    '#fdc935',
+    '#689f38',
+    '#976fd1',
+    '#f781bf',
+    '#52733e',
+];
+
+const generate_3d_scatter = (dataset, id, projection) => {
+    let scatter3d_chart = {
+        data: [
+            {
+                x: dataset['pubYear'],
+                y: dataset['rating'],
+                z: dataset['zIndex'],
+                text: dataset['hovertext'],
+                customdata: dataset['url'],
+                mode: 'markers',
+                type: 'scatter3d',
+                transforms: [
+                    {
+                        type: 'groupby',
+                        groups: dataset['artist_gender'],
+                    },
+                ],
+                marker: {
+                    size: 2.1,
+                },
+                hovertemplate:
+                    '%{text}<br>' +
+                    'Year: %{x}<br>' +
+                    'Score: %{y}<br>' +
+                    'Count: %{z}<br>' +
+                    '<extra></extra>',
+            },
+        ],
+        layout: {
+            uirevision: true,
+            scene: {
+                xaxis: {title: 'Year'},
+                yaxis: {title: 'Score'},
+                zaxis: {title: 'Count'},
+                camera: {
+                    eye: {x: 0, y: 0, z: 1.5},
+                    up: {x: 0, y: 1, z: 0},
+                    projection: {type: projection}
+                },
+            },
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            margin: {t: 30, b: 30, l: 30, r: 2},
+            hovermode: 'closest',
+            xaxis: {
+                title: 'Review date',
+                zeroline: false,
+            },
+            yaxis: {
+                title: 'Rating',
+                zeroline: false,
+            },
+            font: default_font,
+            colorway: colorway,
+        },
+    };
+
+    Plotly.newPlot(id, scatter3d_chart.data, scatter3d_chart.layout);
+};
+
 // Charts
 const generate_scatter = (dataset, id) => {
     let scatter_chart = {
@@ -46,6 +119,7 @@ const generate_scatter = (dataset, id) => {
                 zeroline: false,
             },
             font: default_font,
+            colorway: colorway,
         },
     };
 
@@ -96,6 +170,7 @@ const generate_box = (dataset, id, x, xtitle) => {
                 title: 'Rating',
                 zeroline: false,
             },
+            colorway: colorway,
         },
     };
 
@@ -155,6 +230,7 @@ const generate_stacked_bar = (dataset, id, groupby_column) => {
                 title: 'Count',
                 zeroline: false,
             },
+            colorway: colorway,
         },
     };
 
@@ -208,67 +284,11 @@ const generate_histogram = (dataset, id, group, barmode) => {
                 zeroline: false,
             },
             font: default_font,
+            colorway: colorway,
         },
     };
 
     Plotly.newPlot(id, scatter_chart.data, scatter_chart.layout);
-};
-
-const generate_qq = (dataset, id) => {
-    // Generate some normally distributed data
-    var data = [];
-    for (var i = 0; i < 100; i++) {
-        data.push(d3.randomNormal(0, 1)());
-    }
-
-    // Sort the data
-    data.sort(function (a, b) {
-        return a - b;
-    });
-
-    // Generate the theoretical quantiles
-    var quantiles = [];
-    for (var i = 1; i < data.length + 1; i++) {
-        quantiles.push(jStat.normal.inv((i - 0.5) / data.length, 0, 1));
-    }
-
-    // Create the trace
-    var trace = {
-        x: quantiles,
-        y: data,
-        mode: 'markers',
-        type: 'scatter',
-        name: 'Data',
-    };
-
-    // Add the diagonal line
-    var diagonal = {
-        x: [-3, 3],
-        y: [-3, 3],
-        mode: 'lines',
-        line: {
-            color: 'black',
-            dash: 'dash',
-        },
-        name: 'Diagonal',
-    };
-
-    // Create the layout
-    var layout = {
-        xaxis: {
-            title: 'Theoretical quantiles',
-        },
-        yaxis: {
-            title: 'Sample quantiles',
-        },
-        title: 'Q-Q plot',
-    };
-
-    // Create the plot data array
-    var data = [trace, diagonal];
-
-    // Create the plot
-    Plotly.newPlot('myDiv', data, layout);
 };
 
 // Helpers
@@ -298,6 +318,7 @@ function filterAll(filterCol, dataset, condition) {
 
     return filtered_dataset;
 }
+
 function preprocess(dataset) {
     // Data transformations & additional columns
     dataset['hovertext'] = dataset['album'].map(
@@ -312,11 +333,41 @@ function preprocess(dataset) {
     return dataset;
 }
 
+function addZAxis(dataset) {
+    let scoreYearCounts = {};
+
+    dataset['zIndex'] = new Array(dataset['rating'].length).fill(0);
+
+    dataset['rating'].forEach((score, index) => {
+        let year = dataset['pubYear'][index];
+
+        if (!scoreYearCounts[year]) {
+            scoreYearCounts[year] = {};
+        }
+        if (!scoreYearCounts[year][score]) {
+            scoreYearCounts[year][score] = 0;
+        }
+
+        dataset['zIndex'][index] = ++scoreYearCounts[year][score];
+    });
+
+    return dataset;
+}
+
 fetch('/data/pitchfork_dataset.json')
     .then((response) => response.json())
     .then((pitchfork_data) => {
         // Generate our figures
         pitchfork_data = preprocess(pitchfork_data);
+        pitchfork_data = addZAxis(pitchfork_data); // Add Z-axis field
+        generate_3d_scatter(pitchfork_data, 'scatter-3d', 'perspective');
+        // Event listener for radio buttons
+        document.querySelectorAll('input[name="viewType"]').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                generate_3d_scatter(pitchfork_data, 'scatter-3d', this.value);
+            });
+        });
+
         generate_scatter(pitchfork_data, 'scatter-summary');
 
         generate_box(pitchfork_data, 'box-plot', 'pubYear', 'Review year');
@@ -348,3 +399,5 @@ fetch('/data/popular_labels.json')
 
         generate_box(label_data, 'label-box-plot', 'label', 'Label');
     });
+
+
