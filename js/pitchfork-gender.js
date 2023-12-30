@@ -21,6 +21,74 @@ const colorway = [
     '#52733e',
 ];
 
+function transformData(data, groupByColumn) {
+    let transformedData = [];
+    for (let i = 0; i < data.pubDate.length; i++) {
+        transformedData.push({
+            pubDate: data.pubDate[i],
+            grouper: data[groupByColumn][i].toString(),
+            rating: data.rating[i],
+            date: new Date(data.pubDate[i]),
+            
+        });
+    }
+    console.log(transformedData)
+    return transformedData;
+}
+
+function calculateRollingAverage(data, windowSize) {
+    let rollingAvg = [];
+    for (let i = 0; i < data.length; i++) {
+        let start = Math.max(0, i - windowSize + 1);
+        let sum = 0;
+        for (let j = start; j <= i; j++) {
+            sum += data[j];
+        }
+        rollingAvg.push(sum / (i - start + 1));
+    }
+    return rollingAvg;
+}
+
+function generate_timeseries(data, divId, groupByColumn) {
+    let transformedData = transformData(data, groupByColumn);
+    const windowSize = 200;
+
+    let groupValues = Array.from(new Set(transformedData.map(item => item['grouper'])));    
+    let traces = [];
+
+    groupValues.forEach(groupValue => {
+        let filteredData = transformedData.filter(item => item.grouper === groupValue);
+        let sortedData = filteredData.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+        let ratings = sortedData.map(item => item.rating);
+        let rollingAvg = calculateRollingAverage(ratings, windowSize);
+        traces.push({
+            x: sortedData.map(item => item.date),
+            y: rollingAvg,
+            type: 'scatter',
+            mode: 'lines',
+            name: groupValue.toString() // Convert to string for consistency
+        });
+    });
+
+    Plotly.newPlot(divId, traces, {
+        title: `Grouped by ${groupByColumn}, ${windowSize}-day rolling average`,
+        paper_bgcolor: 'rgba(0,0,0,0)',
+        plot_bgcolor: 'rgba(0,0,0,0)',
+        margin: {t: 30, b: 30, l: 30, r: 2},
+        hovermode: 'closest',
+        xaxis: {
+            title: 'Review date',
+            zeroline: false,
+        },
+        yaxis: {
+            title: 'Rating',
+            zeroline: false,
+        },
+        font: default_font,
+        colorway: colorway,
+    });
+}
+
 const generate_3d_scatter = (dataset, id, projection) => {
     let scatter3d_chart = {
         data: [
@@ -58,7 +126,7 @@ const generate_3d_scatter = (dataset, id, projection) => {
                 camera: {
                     eye: {x: 0, y: 0, z: 1.5},
                     up: {x: 0, y: 1, z: 0},
-                    projection: {type: projection}
+                    projection: {type: projection},
                 },
             },
             paper_bgcolor: 'rgba(0,0,0,0)',
@@ -184,7 +252,6 @@ const generate_box = (dataset, id, x, xtitle) => {
         }
         var customdata = data.points[0].customdata;
         // Open the hyperlink associated with the clicked point in a new tab
-        console.log(data);
         window.open(customdata, '_blank');
     });
 };
@@ -330,10 +397,6 @@ function preprocess(dataset) {
     // For multi-reviews, just take the best score
     dataset['rating'] = dataset['rating'].map(getMax);
 
-    return dataset;
-}
-
-function addZAxis(dataset) {
     let scoreYearCounts = {};
 
     dataset['zIndex'] = new Array(dataset['rating'].length).fill(0);
@@ -351,24 +414,32 @@ function addZAxis(dataset) {
         dataset['zIndex'][index] = ++scoreYearCounts[year][score];
     });
 
+
     return dataset;
 }
 
 fetch('/data/pitchfork_dataset.json')
     .then((response) => response.json())
-    .then((pitchfork_data) => {
+    .then((raw) => {
         // Generate our figures
-        pitchfork_data = preprocess(pitchfork_data);
-        pitchfork_data = addZAxis(pitchfork_data); // Add Z-axis field
+        const pitchfork_data = preprocess(raw);
         generate_3d_scatter(pitchfork_data, 'scatter-3d', 'perspective');
         // Event listener for radio buttons
-        document.querySelectorAll('input[name="viewType"]').forEach(function(radio) {
-            radio.addEventListener('change', function() {
-                generate_3d_scatter(pitchfork_data, 'scatter-3d', this.value);
+        document
+            .querySelectorAll('input[name="viewType"]')
+            .forEach(function (radio) {
+                radio.addEventListener('change', function () {
+                    generate_3d_scatter(
+                        pitchfork_data,
+                        'scatter-3d',
+                        this.value
+                    );
+                });
             });
-        });
 
         generate_scatter(pitchfork_data, 'scatter-summary');
+
+        generate_timeseries(pitchfork_data, 'timeseries-summary', 'pubYear');
 
         generate_box(pitchfork_data, 'box-plot', 'pubYear', 'Review year');
         generate_stacked_bar(pitchfork_data, 'stacked-bar', 'artist_gender');
@@ -399,5 +470,3 @@ fetch('/data/popular_labels.json')
 
         generate_box(label_data, 'label-box-plot', 'label', 'Label');
     });
-
-

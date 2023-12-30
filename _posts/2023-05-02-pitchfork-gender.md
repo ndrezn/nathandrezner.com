@@ -21,7 +21,10 @@ So: Here are a ton of figures, some analysis, and more. Zoom, pan, and hover to 
 
 One aspect I was particularly curious about when starting this project was how artist gender plays into ratings and reviews. Articles _are not_ officially tagged with the artist's gender: For the purposes of this project, I am using the fairly rudimentary method of checking which pronouns are used in the article lede (Pheobe Bridger's _Punisher_ review opens with, "On her marvelous second album, Phoebe Bridgers defines her songwriting: candid, multi-dimensional, slyly psychedelic, and full of heart. Her music has become a world unto itself." -- so the data collector will pick up on the multiple _her_ pronouns and assign the artist gender as "female". Likewise with male ("he", "him", etc.), neutral ("they", "them", etc.) and group ("band", "group", etc.) pronouns.)
 
-Does Pitchfork play any sides disporportionately? Are specific genres over or underrepresented? How have women fared in the review process? Largely, I found Pitchfork surprisingly consistent in their editorial voice, with some exceptions. There is an increase in reviews of women artists over time and the spread of scores has shrunk significantly over time. There are also, of course, some human tendencies that seep through into the reviews: There are spikes in the distribution of 8.0s assigned compared to 8.1s and 7.9s -- the same is true for all whole number scores -- and yes, pop-oriented labels do tend to have poorer reviews.
+<div id='timeseries-summary' style='min-height: 500px'></div>
+<div style="text-align:center; margin: 0 auto;"><small >Comparison of reviews over time.</small></div>
+
+Does Pitchfork play any sides disproportionately? Are specific genres over or underrepresented? How have women fared in the review process? Largely, I found Pitchfork surprisingly consistent in their editorial voice, with some exceptions. There is an increase in reviews of women artists over time and the spread of scores has shrunk significantly over time. There are also, of course, some human tendencies that seep through into the reviews: There are spikes in the distribution of 8.0s assigned compared to 8.1s and 7.9s -- the same is true for all whole number scores -- and yes, pop-oriented labels do tend to have poorer reviews.
 
 <div id='box-plot' style='min-height: 500px'></div>
 <div style="text-align:center; margin: 0 auto;"><small >Year-by-year score aggregations. Fewer extreme low scores are given out over time, and the middle 50% of scores narrows from a span of 1.8 to 0.7. The real average hovers closer to 7.4, not <a href='https://www.theonion.com/pitchfork-gives-music-6-8-1819569318'><i>The Onion</i>'s 6.8</a>. </small></div>
@@ -31,17 +34,18 @@ Publications mature over time -- and _Pitchfork_ is no exception -- and of cours
 <div id='bnm-histogram' style='min-height: 500px'></div>
 <div style="text-align:center; margin: 0 auto;"><small >Distribution of ratings for all Best New Music and non-Best New Music reviews. There are disporportionate peaks on whole numbers: This effect materializes the worst at 7.0 and 8.0. Reminds me of peaks by gender for <a href='https://twitter.com/alexselbyb/status/1650101850782179333'>marathon finish times</a>.</small></div>
 
-Reviews are distributed fairly normally. Notably, there are spikes on whole-number reviews, probably because of a human tendency to just round off. There are also a disporportionate number of 8.0 reviews -- notably, most of these are not marked as "Best New Music" -- in fact, only 7 BNM reviews have scores falling at an 8.0 or lower. Once a review notches past an 8.0, its marginally more likely to be marked as a BNM than as a standard review (plausibly this is related to the inclusion of reviews of reissues or backcatalog records in this dataset).
+Reviews are distributed fairly normally. Notably, there are spikes on whole-number reviews, probably because of a human tendency to just round off. There are also a disproportionate number of 8.0 reviews -- notably, most of these are not marked as "Best New Music" -- in fact, only 7 BNM reviews have scores falling at an 8.0 or lower. Once a review notches past an 8.0, its marginally more likely to be marked as a BNM than as a standard review (plausibly this is related to the inclusion of reviews of reissues or backcatalog records in this dataset).
 
 <div id='stacked-bar' style='min-height: 500px'></div>
 <div style="text-align:center; margin: 0 auto;"><small >Count of reviews over year, grouped by gender. Pitchfork has been surprisingly consistent in its editorial output since its inception, and there are far more women artists represented over time.</small></div>
 
 Observing a comparison of count between reviews, I was first amazed at the consistency in the number of reviews published year-over-year. _Pitchfork_ has published between 1,000 and 1,250 reviews every year since 2003. Even as more people have started reading, the quantity of reviews hasn't changed.
 
-If we compare by gender, there clearly is an increase in the number of reviews of women artists -- but there's also an increase in the nuymber of reviews of male artists. So, plasuibly, _Pitchfork_ is just using pronouns more liberally in their reviews.
+If we compare by gender, there clearly is an increase in the number of reviews of women artists -- but there's also an increase in the number of reviews of male artists. So, plausibly, _Pitchfork_ is just using pronouns more liberally in their reviews.
 
 <div id='genre-histogram' style='min-height: 500px'></div>
 <div style="text-align:center; margin: 0 auto;"><small >How do genre rating distributions stack up?</small></div>
+
 
 <div id='label-box-plot' style='min-height: 500px'></div>
 <div style="text-align:center; margin: 0 auto;"><small >Comparing rating spread for labels with who have distributed more than 100 reviewed albums.</small></div>
