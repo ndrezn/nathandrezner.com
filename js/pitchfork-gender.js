@@ -69,12 +69,6 @@ function generate_timeseries(
 ) {
     let transformedData = transformData(data, groupByColumn);
 
-    if (yearRange.length > 0) {
-        transformedData = transformedData.filter((item) => {
-            return item.pubYear >= yearRange[0] && item.pubYear <= yearRange[1];
-        });
-    }
-
     let groupValues = Array.from(
         new Set(transformedData.map((item) => item['grouper']))
     );
@@ -89,6 +83,12 @@ function generate_timeseries(
     globalSortedData.forEach((item, index) => {
         item.globalRollingAvg = globalRollingAvg[index];
     });
+
+    if (yearRange.length > 0) {
+        transformedData = transformedData.filter((item) => {
+            return item.pubYear >= yearRange[0] && item.pubYear <= yearRange[1];
+        });
+    }
 
     groupValues.forEach((groupValue) => {
         // calculate local rolling average
