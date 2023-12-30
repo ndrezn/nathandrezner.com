@@ -21,10 +21,18 @@ So: Here are a ton of figures, some analysis, and more. Zoom, pan, and hover to 
 
 One aspect I was particularly curious about when starting this project was how artist gender plays into ratings and reviews. Articles _are not_ officially tagged with the artist's gender: For the purposes of this project, I am using the fairly rudimentary method of checking which pronouns are used in the article lede (Pheobe Bridger's _Punisher_ review opens with, "On her marvelous second album, Phoebe Bridgers defines her songwriting: candid, multi-dimensional, slyly psychedelic, and full of heart. Her music has become a world unto itself." -- so the data collector will pick up on the multiple _her_ pronouns and assign the artist gender as "female". Likewise with male ("he", "him", etc.), neutral ("they", "them", etc.) and group ("band", "group", etc.) pronouns.)
 
-<div id='timeseries-summary' style='min-height: 500px'></div>
-<div style="text-align:center; margin: 0 auto;"><small >Comparison of reviews over time.</small></div>
-
 Does Pitchfork play any sides disproportionately? Are specific genres over or underrepresented? How have women fared in the review process? Largely, I found Pitchfork surprisingly consistent in their editorial voice, with some exceptions. There is an increase in reviews of women artists over time and the spread of scores has shrunk significantly over time. There are also, of course, some human tendencies that seep through into the reviews: There are spikes in the distribution of 8.0s assigned compared to 8.1s and 7.9s -- the same is true for all whole number scores -- and yes, pop-oriented labels do tend to have poorer reviews.
+
+<div id='timeseries-summary' style='min-height: 500px'></div>
+<div style="text-align:center; margin: 0 auto;"><small >Comparison of reviews over time,using a rolling average for point-in-time specificity. You can get a sense of how the average review shifts as time goes on -- Best New Music slowly centers on 8.5.</small></div>
+
+When we look at reviews over time using a rolling average, you can see more patterns: Over time, Best New Music averages slowly centers towards 8.5, with a decreasing trend. There are also notable local minimums and maximums -- we can pinpoint where these are by focusing in on each year.
+
+<div id='timeseries-by-year' style='min-height: 500px'></div>
+<div style="text-align:center; margin: 0 auto;"><small >Comparing by year suggests that music is at its worst in late summer, and at its best in late spring and the end of the year.</small></div>
+If we look at the rolling average and compare across years, an interesting pattern emerges: Year over year, we see peaks in ratings in late spring and at the end of the year (November and December), and valleys at the end of the summer.
+
+Music release timing is specified towards specific markets, with a large number of releases in late spring for summer listening and in late summer, during back-to-school season [CITATION NEEDED]. Maybe the best music is launched for a general demographic in the summer, and the rest is saved for students, who are less picky (?????) I have no idea how to read this....
 
 <div id='box-plot' style='min-height: 500px'></div>
 <div style="text-align:center; margin: 0 auto;"><small >Year-by-year score aggregations. Fewer extreme low scores are given out over time, and the middle 50% of scores narrows from a span of 1.8 to 0.7. The real average hovers closer to 7.4, not <a href='https://www.theonion.com/pitchfork-gives-music-6-8-1819569318'><i>The Onion</i>'s 6.8</a>. </small></div>

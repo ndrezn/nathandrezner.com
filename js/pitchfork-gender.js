@@ -24,49 +24,93 @@ const colorway = [
 function transformData(data, groupByColumn) {
     let transformedData = [];
     for (let i = 0; i < data.pubDate.length; i++) {
+        let pubMonthTime = new Date(data.pubDate[i]);
+        pubMonthTime.setFullYear(1970);    
         transformedData.push({
             pubDate: data.pubDate[i],
-            grouper: data[groupByColumn][i].toString(),
+            grouper: data[groupByColumn][i],
             rating: data.rating[i],
             date: new Date(data.pubDate[i]),
-            
+            pubYear: data.pubYear[i],
+            pubMonthTime: pubMonthTime,
         });
     }
-    console.log(transformedData)
     return transformedData;
 }
 
 function calculateRollingAverage(data, windowSize) {
-    let rollingAvg = [];
-    for (let i = 0; i < data.length; i++) {
-        let start = Math.max(0, i - windowSize + 1);
+    let rollingAvg = new Array(data.length);
+
+    for (let i = 0; i < windowSize - 1; i++) {
+        rollingAvg[i] = null; // Fill initial elements with null or an appropriate placeholder
+    }
+
+    for (let i = windowSize - 1; i < data.length; i++) {
         let sum = 0;
-        for (let j = start; j <= i; j++) {
+        for (let j = i - windowSize + 1; j <= i; j++) {
             sum += data[j];
         }
-        rollingAvg.push(sum / (i - start + 1));
+        rollingAvg[i] = sum / windowSize;
     }
+
     return rollingAvg;
 }
 
-function generate_timeseries(data, divId, groupByColumn) {
+// Generate a timeseries chart with various grouping capabilitie
+// and using a rolling average for smoothing ratings over time
+function generate_timeseries(
+    data,
+    divId,
+    groupByColumn,
+    useGlobalAverage = true,
+    yearRange = [],
+    windowSize = 150,
+    stackYears = false
+) {
     let transformedData = transformData(data, groupByColumn);
-    const windowSize = 200;
 
-    let groupValues = Array.from(new Set(transformedData.map(item => item['grouper'])));    
+    if (yearRange.length > 0) {
+        transformedData = transformedData.filter((item) => {
+            return item.pubYear >= yearRange[0] && item.pubYear <= yearRange[1];
+        });
+    }
+
+    let groupValues = Array.from(
+        new Set(transformedData.map((item) => item['grouper']))
+    );
     let traces = [];
 
-    groupValues.forEach(groupValue => {
-        let filteredData = transformedData.filter(item => item.grouper === groupValue);
-        let sortedData = filteredData.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
-        let ratings = sortedData.map(item => item.rating);
-        let rollingAvg = calculateRollingAverage(ratings, windowSize);
+    // Global rolling average
+    let globalSortedData = transformedData.sort(
+        (a, b) => new Date(a.pubDate) - new Date(b.pubDate)
+    );
+    let globalRatings = globalSortedData.map((item) => item.rating);
+    let globalRollingAvg = calculateRollingAverage(globalRatings, windowSize);
+    globalSortedData.forEach((item, index) => {
+        item.globalRollingAvg = globalRollingAvg[index];
+    });
+
+    groupValues.forEach((groupValue) => {
+        // calculate local rolling average
+        let filteredData = transformedData.filter(
+            (item) => item.grouper === groupValue
+        );
+        let sortedData = filteredData.sort(
+            (a, b) => new Date(a.pubDate) - new Date(b.pubDate)
+        );
+        let rollingAvg;
+        if (!useGlobalAverage) {
+            let ratings = sortedData.map((item) => item.rating);
+            rollingAvg = calculateRollingAverage(ratings, windowSize);
+        } else {
+            rollingAvg = sortedData.map((item) => item.globalRollingAvg);
+        }
         traces.push({
-            x: sortedData.map(item => item.date),
+            x: sortedData.map((item) => stackYears ? item.pubMonthTime : item.pubDate),
             y: rollingAvg,
             type: 'scatter',
             mode: 'lines',
-            name: groupValue.toString() // Convert to string for consistency
+            name: groupValue.toString(), // Convert to string for consistency
         });
     });
 
@@ -75,7 +119,7 @@ function generate_timeseries(data, divId, groupByColumn) {
         paper_bgcolor: 'rgba(0,0,0,0)',
         plot_bgcolor: 'rgba(0,0,0,0)',
         margin: {t: 30, b: 30, l: 30, r: 2},
-        hovermode: 'closest',
+        hovermode: 'x unified',
         xaxis: {
             title: 'Review date',
             zeroline: false,
@@ -414,7 +458,6 @@ function preprocess(dataset) {
         dataset['zIndex'][index] = ++scoreYearCounts[year][score];
     });
 
-
     return dataset;
 }
 
@@ -439,7 +482,16 @@ fetch('/data/pitchfork_dataset.json')
 
         generate_scatter(pitchfork_data, 'scatter-summary');
 
-        generate_timeseries(pitchfork_data, 'timeseries-summary', 'pubYear');
+        generate_timeseries(pitchfork_data, 'timeseries-summary', 'bnm', false);
+        generate_timeseries(
+            pitchfork_data,
+            'timeseries-by-year',
+            'pubYear',
+            true,
+            [2020, 2050],
+            150,
+            true
+        );
 
         generate_box(pitchfork_data, 'box-plot', 'pubYear', 'Review year');
         generate_stacked_bar(pitchfork_data, 'stacked-bar', 'artist_gender');
