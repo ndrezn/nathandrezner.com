@@ -56,6 +56,86 @@ function calculateRollingAverage(data, windowSize) {
     return rollingAvg;
 }
 
+
+// Generates a timeseries chart which first aggregates the data by
+// week and then calculate the average for that week and plots it as
+// a line chart. We group by week before plotting to ensure
+// only ~52 data points per year are plotted.
+function generate_timeseries_weekly(data, divId, groupByColumn) {
+    let transformedData = transformData(data, groupByColumn);
+
+    let groupValues = Array.from(
+        new Set(transformedData.map((item) => item['grouper']))
+    );
+    let traces = [];
+
+    groupValues.forEach((groupValue) => {
+        let filteredData = transformedData.filter(
+            (item) => item.grouper === groupValue
+        );
+        let sortedData = filteredData.sort(
+            (a, b) => new Date(a.pubDate) - new Date(b.pubDate)
+        );
+
+        // Aggregate by week
+        let weeklyData = [];
+        let currentWeek = [];
+        let currentWeekDate = null;
+        sortedData.forEach((item) => {
+            if (!currentWeekDate) {
+                currentWeekDate = item.date;
+            }
+            if (
+                item.date.getFullYear() === currentWeekDate.getFullYear() &&
+                item.date.getMonth() === currentWeekDate.getMonth() &&
+                item.date.getDate() === currentWeekDate.getDate()
+            ) {
+                currentWeek.push(item);
+            } else {
+                weeklyData.push(currentWeek);
+                currentWeek = [item];
+                currentWeekDate = item.date;
+            }
+        });
+        weeklyData.push(currentWeek);
+
+        let weeklyAvg = weeklyData.map((week) => {
+            let sum = 0;
+            week.forEach((item) => {
+                sum += item.rating;
+            });
+            return sum / week.length;
+        });
+
+        traces.push({
+            x: weeklyData.map((week) => week[0].date),
+            y: weeklyAvg,
+            type: 'scatter',
+            mode: 'lines',
+            name: groupValue.toString(), // Convert to string for consistency
+        });
+    });
+
+    Plotly.newPlot(divId, traces, {
+        title: `Grouped by ${groupByColumn}`,
+        paper_bgcolor: 'rgba(0,0,0,0)',
+        plot_bgcolor: 'rgba(0,0,0,0)',
+        margin: {t: 30, b: 30, l: 30, r: 2},
+        hovermode: 'x unified',
+        xaxis: {
+            title: 'Review date',
+            zeroline: false,
+        },
+        yaxis: {
+            title: 'Rating',
+            zeroline: false,
+        },
+        font: default_font,
+        colorway: colorway,
+    });
+}
+
+
 // Generate a timeseries chart with various grouping capabilitie
 // and using a rolling average for smoothing ratings over time
 function generate_timeseries(
