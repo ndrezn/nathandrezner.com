@@ -28,6 +28,8 @@ Does Pitchfork play any sides disproportionately? Are specific genres over or un
 
 When we look at reviews over time using a rolling average, you can see more patterns: Over time, Best New Music averages slowly centers towards 8.5, with a decreasing trend. There are also notable local minimums and maximums -- we can pinpoint where these are by focusing in on each year.
 
+We also can see that music *on average* is getting better -- or, the best music is getting worse, while music in general is getting better. This is just as likely meta-commentary on Pitchfork's editorial practice: As the publication becomes more mainstream, outliers tend to decrease, and more music in general is given higher scores. We'll see more of this later.
+
 <div id='timeseries-by-year' style='min-height: 500px'></div>
 <div style="text-align:center; margin: 0 auto;"><small >Comparing by year suggests that music is at its worst in late summer, and at its best in late spring and the end of the year.</small></div>
 If we look at the rolling average and compare across years, an interesting pattern emerges: Year over year, we see peaks in ratings in late spring and at the end of the year (November and December), and valleys at the end of the summer.
@@ -58,15 +60,20 @@ If we compare by gender, there clearly is an increase in the number of reviews o
 <div id='label-box-plot' style='min-height: 500px'></div>
 <div style="text-align:center; margin: 0 auto;"><small >Comparing rating spread for labels with who have distributed more than 100 reviewed albums.</small></div>
 ## Best New Music
+Best New Music is a superlative given to the best "point in time" release by Pitchfork. As an early digital publication, it could [uniquely publish](https://pitchfork.com/features/lists-and-guides/the-history-of-the-pitchfork-reviews-section-in-38-important-reviews/) a best-of-the-year list in real-time, rather than waiting until year end for official rankings: The first was given to Deerhoof's *Apple O'* in 2003. (Pitchfork also had poor search capabilities early on, so they wanted to consolidate all of their favorite albums onto a single page.) Here, we can take a closer look at the complete set of Best New Music albums -- all of those records which which reflect Pitchfork's core recommendations. 
 
 <div id='bnm-scatter-summary' style='min-height: 500px'></div>
-<div style="text-align:center; margin: 0 auto;"><small >All Best New Music reviews.</small></div>
+<div style="text-align:center; margin: 0 auto;"><small >All Best New Music reviews. Click on a point to jump to the review, or click traces from the legend to isolate them.</small></div>
+
+Best New Music encompasses not just new albums, but also reissues -- so you may see some albums that were released far earlier than their review date. Only one album has been given both a Best New Music superlative and a score lower than 8.0 -- 2003's  _Let's Get Serious EP_ by PANTHERS. 
 
 <div id='bnm-box-plot' style='min-height: 500px'></div>
-<div style="text-align:center; margin: 0 auto;"><small >Aggregating the scores for best new music reviews.</small></div>
+<div style="text-align:center; margin: 0 auto;"><small >Aggregating the scores for best new music reviews. As in the rolling average plot above, we can see that BNM review scores are slowly decreasing towards 8.5.</small></div>
 
 <div id='bnm-stacked-bar' style='min-height: 500px'></div>
-<div style="text-align:center; margin: 0 auto;"><small >Best new music reviews as grouped by artist gender and count.</small></div>
+<div style="text-align:center; margin: 0 auto;"><small >Best new music reviews as grouped by artist gender and count. We see a similar distribution by gender as across all reviews.</small></div>
+
+When we compare by gender, we can see that 
 
 <div id='bnm-stacked-bar-contributor' style='min-height: 500px'></div>
 <div style="text-align:center; margin: 0 auto;"><small >Does the contributor's title play a role in whether they have a BNM byline?</small></div>
