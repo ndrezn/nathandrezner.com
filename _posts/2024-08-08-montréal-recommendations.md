@@ -1,10 +1,12 @@
 ---
 layout: post
-title: Montréal recommendations by Nathan
+title: Montréal recommendations
 ---
 Montréal is full of incredible hidden gems. Everyone who lives in a *place* has to at some point make a guide to that *place* — so — here's mine for Montréal. If you like this list or found it useful, please let me know what your favorite stops were... email me!
 
 This list is organized first by neighborhoods with a density of activities & food, and then by specific categories of food and activity. ⭐️ icons are top picks, and include restaurants, neighborhoods, and storefronts. The photos are shamelessly borrowed from Tourism Montreal.
+
+*Note: I originally wrote this list in 2023 and have been sharing it and updating it over time. My website is a better place to keep track of it, and I'll make updates to this list over time. Enjoy!*
 
 **This list is very opinionated. Feel free to ignore me, do what make you happy!**
 
