@@ -1,0 +1,16 @@
+<div class="code-component" data-id-prefix="{{ include.id_prefix }}">
+    <textarea id="{{ include.id_prefix }}-code-editor">
+    {{- include.code | default: '' | strip -}}
+    </textarea>
+    <div class="button-container">
+        <button id="{{ include.id_prefix }}-run-button" class="button" disabled>
+            Run
+        </button>
+        <button id="{{ include.id_prefix }}-format-button" class="button" disabled {% unless
+            include.enable_format_button %}style="display:none;" {% endunless %}>
+            Format
+        </button>
+    </div>
+    <pre id="{{ include.id_prefix }}-output"></pre>
+    <div id="{{ include.id_prefix }}-plot"></div>
+</div>
