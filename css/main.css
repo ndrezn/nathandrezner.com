@@ -1,12 +1,15 @@
 body {
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-family:
+        Century Gothic,
+        CenturyGothic,
+        AppleGothic,
+        sans-serif;
     font-size: 1em;
     font-style: normal;
     color: #686867;
     letter-spacing: 0.1px;
     line-height: 1.4;
 }
-
 
 a {
     color: #000;
@@ -29,7 +32,8 @@ a {
     }
 }
 
-@media (max-device-width: 900px), (max-width: 700px) {
+@media (max-device-width: 900px),
+(max-width: 700px) {
     #body-text {
         width: 90%;
     }
@@ -136,6 +140,7 @@ a:hover {
     -webkit-transform: scale(1.5, 1.5);
     z-index: 1;
 }
+
 .photo3:hover {
     -webkit-transform: scale(1.25, 1.25);
     z-index: 1;
@@ -156,12 +161,88 @@ a:hover {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
 
+/* Style for the code component container */
+.code-component {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: var(--background-color, #f5f5f5);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
 
+/* Style for the textarea */
+.code-component textarea {
+    flex-grow: 1;
+    resize: vertical;
+    min-height: 150px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    background-color: var(--editor-bg-color, #ffffff);
+    color: var(--editor-text-color, #333333);
+}
+
+/* Container for the buttons */
+.code-component .button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+/* Style for the buttons */
+.code-component .button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--button-bg-color, #007bff);
+    color: var(--button-text-color, #ffffff);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.code-component .button:hover {
+    background-color: var(--button-hover-bg-color, #0056b3);
+}
+
+/* Style for disabled buttons */
+.code-component .button:disabled {
+    background-color: var(--button-disabled-bg-color, #cccccc);
+    color: var(--button-disabled-text-color, #666666);
+    cursor: not-allowed;
+}
+
+/* Responsive style for textarea and buttons */
+@media (max-width: 600px) {
+    .code-component {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .code-component .button-container {
+        justify-content: space-between;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #2c2c2c;
+        --editor-bg-color: #3c3c3c;
+        --editor-text-color: #f5f5f5;
+        --button-bg-color: #1a73e8;
+        --button-hover-bg-color: #135ba1;
+    }
+}
