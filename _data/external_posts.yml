@@ -1,0 +1,43 @@
+# Posts written elsewhere (Plotly, LangChain). Merged with _posts by date on the Other Work page.
+
+- date: 2026-09-24
+  title: "Managed Deep Agents v0.8: new auth, memory, and channels"
+  excerpt: "User-scoped authentication, layered memory, HTTP channels, and built-in web search for Managed Deep Agents on LangSmith. Co-written with Karthic Subramanian."
+  url: "https://www.langchain.com/blog/langsmith-managed-deep-agents-whats-new"
+  tag: langchain
+
+- date: 2026-06-23
+  title: "Dash MCP support"
+  excerpt: "Dash 4.3 lets you turn an existing Dash app into an MCP server that AI agents can discover and use as a tool, with a single argument to the Dash constructor."
+  url: "https://plotly.com/blog/dash-mcp-turn-your-dash-app-into-a-tool-for-ai-agents/"
+  tag: plotly
+
+- date: 2026-02-10
+  title: "Team collaboration in Plotly Cloud"
+  excerpt: "Plotly Cloud now supports teams, with role-based access for Creators and Viewers so organizations can share and manage data apps securely."
+  url: "https://plotly.com/blog/a-new-era-for-collaborative-analytics/"
+  tag: plotly
+
+- date: 2025-06-09
+  title: "Introducing Plotly Cloud"
+  excerpt: "A new hosting platform that simplifies publishing and sharing Dash and Studio apps, without the infrastructure overhead."
+  url: "https://plotly.com/blog/plotly-cloud-best-way-publish-dash-apps/"
+  tag: plotly
+
+- date: 2024-12-05
+  title: "Plotly.py 6, Plotly.js 3, Dash 3, and a new Kaleido"
+  excerpt: "Plotly.py 6.0, Plotly.js 3.0, Dash 3.0 and a redesigned Kaleido, all released together. Co-written with Greg Wilson."
+  url: "https://plotly.com/blog/plotly-dash-major-release/"
+  tag: plotly
+
+- date: 2024-11-27
+  title: "Range charts in Plotly"
+  excerpt: "MinutePhysics called out data tools for missing range charts, Plotly included. It turns out Plotly has no named range chart type, but plenty of controls to build one."
+  url: "https://plotly.com/blog/range-charts-in-plotly/"
+  tag: plotly
+
+- date: 2024-09-06
+  title: "Plotly.py reaches 500 million downloads"
+  excerpt: "Plotly.py hit 500 million lifetime downloads from PyPI, a milestone for the library since its 2013 launch."
+  url: "https://plotly.com/blog/500-million-downloads-plotly-py/"
+  tag: plotly

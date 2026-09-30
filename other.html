@@ -4,17 +4,38 @@ title: Blog | Nathan Drezner
 ---
 
 <div id="body-text" class="contact">
-    <p>I have several side projects, with more on the way.</p>
-    <br /><br />
+    {%- assign items = "" | split: "" -%}
+    {%- for post in site.posts -%}
+    {%- capture key %}{{ post.date | date: "%Y-%m-%d" }}|p|{{ forloop.index0 }}{% endcapture -%}
+    {%- assign items = items | push: key -%}
+    {%- endfor -%}
+    {%- for ext in site.data.external_posts -%}
+    {%- capture key %}{{ ext.date | date: "%Y-%m-%d" }}|e|{{ forloop.index0 }}{% endcapture -%}
+    {%- assign items = items | push: key -%}
+    {%- endfor -%}
+    {%- assign items = items | sort | reverse -%}
 
-    {%- for post in site.posts -%} {%- assign date_format = site.date_format |
-    default: "%B %-d, %Y" -%}
-    <h5>{{ post.date | date: date_format }}</h5>
-    <h2>{{ post.title | escape }}</h2>
-    <p>{{ post.excerpt }}</p>
+    {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
+    {%- for item in items -%}
+    {%- assign parts = item | split: "|" -%}
+    {%- assign idx = parts[2] | plus: 0 -%}
+    {%- if parts[1] == "p" -%}
+    {%- assign entry = site.posts[idx] -%}
+    {%- assign href = entry.url | relative_url -%}
+    {%- assign excerpt = entry.excerpt -%}
+    {%- assign tag = entry.tag | default: "personal" -%}
+    {%- else -%}
+    {%- assign entry = site.data.external_posts[idx] -%}
+    {%- assign href = entry.url -%}
+    {%- assign tag = entry.tag -%}
+    {%- assign excerpt = entry.excerpt -%}
+    {%- endif -%}
+    <h5>{{ entry.date | date: date_format }} · {{ tag }}</h5>
+    <h2>{{ entry.title | escape }}</h2>
+    <p>{{ excerpt }}</p>
 
     <p>
-        <a class="post-link" href="{{ post.url | relative_url }}">See more</a>
+        <a class="post-link" href="{{ href }}">See more</a>
     </p>
 
     <br /><br />
