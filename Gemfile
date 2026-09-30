@@ -17,6 +17,9 @@ gem "logger"
 gem "base64"
 gem "bigdecimal"
 
+# liquid 4.0.3 calls String#tainted?, removed in Ruby 3.2; 4.0.4 fixes it
+gem "liquid", "~> 4.0.4"
+
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
 platforms :mingw, :x64_mingw, :mswin, :jruby do
