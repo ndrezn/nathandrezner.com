@@ -1,9 +1,13 @@
+@font-face {
+    font-family: 'Site Gothic';
+    src:
+        local('Century Gothic'),
+        local('CenturyGothic'),
+        local('AppleGothic');
+}
+
 body {
-    font-family:
-        Century Gothic,
-        CenturyGothic,
-        AppleGothic,
-        sans-serif;
+    font-family: 'Site Gothic', sans-serif;
     font-size: 1em;
     font-style: normal;
     color: #686867;
@@ -26,16 +30,14 @@ a {
     }
 }
 
-@media (max-device-width: 900px) {
+@media (max-width: 700px) {
     body {
-        font-size: 2.5em;
+        font-size: 1.125em;
     }
-}
 
-@media (max-device-width: 900px),
-(max-width: 700px) {
-    #body-text {
-        width: 90%;
+    header,
+    #footer {
+        padding: 16px 20px;
     }
 
     header {
@@ -43,12 +45,43 @@ a {
         justify-content: space-between;
     }
 
-    #location {
-        position: relative !important;
+    #location,
+    #nav,
+    #footer {
+        position: static;
     }
 
-    #nav {
-        position: relative !important;
+    body .contact,
+    body .photoby,
+    body #fadein,
+    body #body-text {
+        width: 88%;
+    }
+
+    body .contact,
+    body .photoby {
+        padding-top: 48px;
+    }
+
+    body .contact:not(#body-text) {
+        padding-top: 25vh;
+    }
+
+    #body-text {
+        padding-bottom: 80px;
+    }
+
+    #footer {
+        padding-top: 48px;
+    }
+
+    /* Grow photos toward the screen centre so outer columns don't spill off-screen */
+    .image-line > .photo:nth-child(3n + 1) {
+        transform-origin: left center;
+    }
+
+    .image-line > .photo:nth-child(3n) {
+        transform-origin: right center;
     }
 }
 
@@ -126,6 +159,8 @@ a:hover {
     padding: 5px;
     width: 33%;
     height: 20%;
+    position: relative;
+    transition: transform 0.2s ease;
 }
 
 .photoby {
