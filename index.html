@@ -19,22 +19,33 @@ title: Nathan Drezner
     <div id="temparature_montreal">
         <div></div>
         <script>
-            $.ajax({
-                url: 'https://api.weatherbit.io/v2.0/current?lat=45.5581968&lon=-73.8516462&key=2f61a52ba2ad48d7963e83269b4199e4&include=minutely',
-
-                jsonp: 'callback',
-
-                dataType: 'jsonp',
-                success: function (data) {
-                    $('#temparature_montreal').html(
+            var WMO = {
+                0: 'clear', 1: 'mostly clear', 2: 'partly cloudy', 3: 'overcast',
+                45: 'foggy', 48: 'foggy',
+                51: 'drizzling', 53: 'drizzling', 55: 'drizzling',
+                56: 'freezing drizzle', 57: 'freezing drizzle',
+                61: 'rainy', 63: 'rainy', 65: 'rainy',
+                66: 'freezing rain', 67: 'freezing rain',
+                71: 'snowy', 73: 'snowy', 75: 'snowy', 77: 'snowy',
+                80: 'showery', 81: 'showery', 82: 'showery',
+                85: 'snowy', 86: 'snowy',
+                95: 'stormy', 96: 'stormy', 99: 'stormy',
+            };
+            fetch(
+                'https://api.open-meteo.com/v1/forecast?latitude=45.5582&longitude=-73.8516&current=temperature_2m,weather_code'
+            )
+                .then(function (r) {
+                    return r.json();
+                })
+                .then(function (data) {
+                    var desc = WMO[data.current.weather_code];
+                    document.getElementById('temparature_montreal').textContent =
                         "It's " +
-                            data.data[0].weather.description.toLowerCase() +
-                            ' and ' +
-                            data.data[0].temp +
-                            '°C in Tiohtià:ke (fr/en: Montréal).'
-                    );
-                },
-            });
+                        (desc ? desc + ' and ' : '') +
+                        data.current.temperature_2m +
+                        '°C in Tiohtià:ke (fr/en: Montréal).';
+                })
+                .catch(function () {});
         </script>
     </div>
 </div>
