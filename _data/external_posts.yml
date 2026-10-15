@@ -1,5 +1,23 @@
 # Posts written elsewhere (Plotly, LangChain). Merged with _posts by date on the Other Work page.
 
+- date: 2026-10-09
+  title: "Build great out-of-the-box user experiences with Managed Deep Agents"
+  excerpt: "A long-running agent that says nothing reads as a broken one. The reactions option in Managed Deep Agents v0.9 turns Slack emoji into loading states, assigned by conditional logic or by a decision model."
+  url: "https://www.langchain.com/blog/slack-sdk-managed-deep-agents"
+  tag: langchain
+
+- date: 2026-10-08
+  title: "Agents that can pay: building Restock with Stripe's Link and Managed Deep Agents"
+  excerpt: "Restock is a sample office-supply agent that runs in Slack, builds a cart, and pays through Stripe's Link wallet. Payment credentials never reach the model, and every order needs approval in both Slack and Link. Co-written with Srimanth Tangedipalli and Sydney Runkle."
+  url: "https://www.langchain.com/blog/agents-that-can-pay-with-stripe-link"
+  tag: langchain
+
+- date: 2026-10-07
+  title: "Managed Deep Agents v0.9: schedules, per-run configuration, and Slack reactions"
+  excerpt: "Agents can set their own reminders and recurring tasks mid-conversation. A single deployment can also pick its model, skills, and tools per request, and acknowledge a Slack message before it starts work."
+  url: "https://www.langchain.com/blog/managed-deep-agents-schedules-per-run-configuration-slack"
+  tag: langchain
+
 - date: 2026-09-24
   title: "Managed Deep Agents v0.8: new auth, memory, and channels"
   excerpt: "User-scoped authentication, layered memory, HTTP channels, and built-in web search for Managed Deep Agents on LangSmith. Co-written with Karthic Subramanian."
